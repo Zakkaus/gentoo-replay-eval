@@ -112,6 +112,21 @@ autobump.sh escalates at `exit 3`. Lessons give a small lift on fixes. Full tabl
 - `cases/` — gentoo/gentoo 真实快照做的 fixture / real gentoo/gentoo snapshots as fixtures.
   语料分类来自 `gentoo-tree-lessons` 的 `data/commits.jsonl` / case selection draws on that repo's classified corpus.
 
+## 更新 / Refreshing (可持续)
+
+    make cases    # 从 corpus + 分类提交重建用例(默认取 sibling gentoo-tree-lessons)/ rebuild the eval set
+    make score    # 确定性打分 / deterministic scoring
+    make check    # 校验用例+脚本(CI 跑的)/ validate cases+scripts (what CI runs)
+    make eval     # 重跑 clean-room agents(需 Claude Code harness)/ re-run the agents (needs the harness)
+
+脚本零绝对路径(env: `GENTOO_CORPUS` / `COMMITS` / `CASES_DIR` / `SEED` / `LESSONS_DIR`,默认指向
+sibling `gentoo-tree-lessons`)。`results/PROVENANCE.json` 记录用例来源+seed+分层,每个 case 的 sha
+可追溯到 gentoo/gentoo,所以整套可复现。CI 每次 push 跑 `make check`。
+
+Scripts have zero absolute paths (env above, defaulting to a sibling `gentoo-tree-lessons`).
+`results/PROVENANCE.json` records source+seed+strata; each case sha traces to gentoo/gentoo, so the
+set is reproducible. CI runs `make check` on every push.
+
 ## 说明 / Notes
 
 - 语言:harness 用 Python(与 pkgcheck/pkgdev/nvchecker 生态一致,也复用已有的 commit 分类器)。确定性

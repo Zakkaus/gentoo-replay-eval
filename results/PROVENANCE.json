@@ -1,0 +1,10 @@
+{
+ "source_commits": "../gentoo-tree-lessons/data/commits.jsonl",
+ "seed": 7,
+ "n_cases": 36,
+ "strata": {
+  "edit-bump": 18,
+  "fix": 18
+ },
+ "note": "each case sha is traceable to gentoo/gentoo; select_cases.py rebuilds from source"
+}

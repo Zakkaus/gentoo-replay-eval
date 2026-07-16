@@ -18,9 +18,18 @@ scoring (hashes need network). Copyright-year lines are normalized.
 """
 import json, os, re, subprocess, random
 
-REPO = "/var/tmp/gentoo-history"
-COMMITS = "/var/tmp/gentoo-analysis/commits.jsonl"
-OUT = "/home/zakk/code/gentoo-replay-eval/cases"
+_HERE = os.path.dirname(os.path.abspath(__file__))
+def _first(*ps): return next((p for p in ps if p and os.path.exists(p)), ps[-1])
+# corpus + classified commits default to a sibling gentoo-tree-lessons checkout;
+# override with env GENTOO_CORPUS / COMMITS / CASES_DIR / SEED.
+REPO    = os.environ.get("GENTOO_CORPUS") or _first(
+              os.path.join(_HERE, ".corpus"),
+              os.path.join(_HERE, "..", "gentoo-tree-lessons", ".corpus"))
+COMMITS = os.environ.get("COMMITS") or _first(
+              os.path.join(_HERE, "data", "commits.jsonl"),
+              os.path.join(_HERE, "..", "gentoo-tree-lessons", "data", "commits.jsonl"))
+OUT     = os.environ.get("CASES_DIR") or os.path.join(_HERE, "cases")
+SEED    = int(os.environ.get("SEED", "7"))
 VER_RE = re.compile(r"^(?P<pn>.+?)-(?P<pv>\d[^/]*?)\.ebuild$")
 
 def sh(*a):
@@ -103,7 +112,7 @@ def build_case(sha, want):
     return None
 
 def main():
-    random.seed(7)
+    random.seed(SEED)
     per = {"rename-bump": 12, "edit-bump": 18, "fix": 18}
     pools = {"bump": [], "fix": []}
     for l in open(COMMITS):

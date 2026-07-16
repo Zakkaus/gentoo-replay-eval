@@ -8,7 +8,8 @@ ways to write the same edit) is judged separately by an agent in the workflow.
 """
 import json, os, glob, sys
 
-CASES = "cases"; RUNS = "runs"
+_HERE = os.path.dirname(os.path.abspath(__file__))
+CASES = os.path.join(_HERE, "cases"); RUNS = os.path.join(_HERE, "runs"); RESULTS = os.path.join(_HERE, "results")
 
 def norm(txt):
     out = []
@@ -39,7 +40,7 @@ def main():
             cand = open(cand_p).read()
             rows.append(dict(id=cid, stratum=meta["stratum"], ecosystem=meta["ecosystem"],
                              arm=arm, exact=(norm(cand) == norm(truth)), **linescore(cand, truth)))
-    json.dump(rows, open("results/scores.json", "w"), indent=1)
+    json.dump(rows, open(os.path.join(RESULTS, "scores.json"), "w"), indent=1)
     # aggregate
     import collections
     agg = collections.defaultdict(lambda: collections.Counter())
@@ -55,5 +56,5 @@ def main():
     return rows
 
 if __name__ == "__main__":
-    os.makedirs("results", exist_ok=True)
+    os.makedirs(RESULTS, exist_ok=True)
     main()
