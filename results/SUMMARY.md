@@ -4,6 +4,11 @@
 lessons), each candidate judged against held-out ground truth. Deterministic
 normalized-exact + jaccard from `score.py`; correct/partial/wrong from the judge.
 
+**Run:** 144 agents total — 72 clean-room solve (36 cases × 2 arms) + 72 judge — all completed,
+0 errors. Model: **Claude Opus 4.8** (`claude-opus-4-8`, 1M context; the session model at run
+time), ~2.7M subagent output tokens, run within a Claude subscription (no extra cost). The mining
+that produced the lessons (`gentoo-tree-lessons`) was a separate round on Claude Fable 5.
+
 | stratum   | arm     | n  | exact% | jaccard | judge correct | +partial |
 |-----------|---------|----|--------|---------|---------------|----------|
 | fix       | with    | 18 | 33.3%  | 0.938   | 8 (44%)       | 16 (89%) |

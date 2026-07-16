@@ -90,6 +90,16 @@ correct-or-partial, 0.94 line-jaccard); **edit-bumps in this sample are mostly H
 upstream .cabal, so offline reproduction is ~0% and lessons cannot supply the missing data** -- exactly where
 autobump.sh escalates at `exit 3`. Lessons give a small lift on fixes. Full table and caveats in `results/SUMMARY.md`.
 
+**运行 / Run:** round-1 跑了 **144 个 agent**(72 clean-room solve + 72 judge),**全部完成、0 error**,
+用当时的会话模型 **Claude Opus 4.8**(`claude-opus-4-8`,1M context),约 270 万 subagent token,在订阅额度内。
+(产出经验库的挖掘是另一轮,用的 Claude Fable 5。)脚本零绝对路径、env 驱动,语料换成任何 ebuild 仓库都行,
+**不限于 gentoo-zh**。
+
+**Run:** round-1 used **144 agents** (72 clean-room solve + 72 judge), **all completed, 0 errors**, on the
+session model **Claude Opus 4.8** (`claude-opus-4-8`, 1M context), ~2.7M subagent tokens, within a Claude
+subscription. (The mining that produced the lessons was a separate round on Claude Fable 5.) Scripts have zero
+absolute paths and are env-driven — point them at any ebuild repo, **not limited to gentoo-zh**.
+
 ## 如何扩展 / Extending
 
 - 加用例:`python3 select_cases.py`(采样在 `select_cases.py` 顶部的 `per`)。用例是 gentoo/gentoo 的
