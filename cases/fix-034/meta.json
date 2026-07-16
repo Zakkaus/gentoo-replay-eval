@@ -1,0 +1,14 @@
+{
+ "id": "fix-034",
+ "sha": "379f59c4d61b89d927e2133f4231ca46f083118c",
+ "stratum": "fix",
+ "pkg": "dev-python/jsonpickle",
+ "ecosystem": "python",
+ "task": {
+  "kind": "fix",
+  "pkg": "dev-python/jsonpickle",
+  "file": "jsonpickle-4.1.1.ebuild",
+  "problem": "dev-python/jsonpickle: Remove py3.11 (per scipy)",
+  "bug": null
+ }
+}

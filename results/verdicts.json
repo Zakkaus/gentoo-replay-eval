@@ -1,0 +1,578 @@
+[
+ {
+  "id": "edit-bump-005",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 3,
+  "extra": 0,
+  "note": "Candidate applied EAPI 7->8 correctly but omitted the key functional edits: the added `elisp-enable-tests ert test` line (likely the actual reason for the -r1 revbump), the 9999/git-r3 conditional restructuring of SRC_URI+KEYWORDS, and the DOCS array conversion. HOMEPAGE trailing slash and DOCS form treated leniently but the tests enablement is a real omission. Ebuild not broken."
+ },
+ {
+  "id": "edit-bump-006",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 7,
+  "extra": 1,
+  "note": "Candidate only bumped CABAL_HACKAGE_REVISION 3->4 (reference set it to 9). It missed all the real edits: added CABAL_CHDEPS block, added >=dev-haskell/text-1.1.1 RDEPEND, loosened unicode-data upper bound <0.5 -> <0.9, ghc 8.4.3 -> 9.0.2, cabal 2.2.0.1 -> 3.4.1.0, quickcheck upper <2.15 -> <2.18 plus dev-haskell/text test dep, removed IUSE=\"\". The revision value itself is also wrong (4 vs 9)."
+ },
+ {
+  "id": "edit-bump-000",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 7,
+  "extra": 0,
+  "note": "Candidate is the old 1.1.3.0 ebuild with only the version bumped; it kept everything identical (explicitly noting deps couldn't be verified offline). Missed all reference functional edits: CABAL_HACKAGE_REVISION=3 added; IUSE +gmp -> +simd; RDEPEND ghc 8.4.3 -> 9.0.2 and dropped gmp block; cabal 2.2.0.1 -> 3.4.1.0; test deps rewritten with upper bounds; added src_prepare cabal-mksetup; cabal_flag gmp libgmp -> simd simd."
+ },
+ {
+  "id": "edit-bump-001",
+  "arm": "without",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "All functional edits reproduced: EAPI 7->8, HOMEPAGE trailing slash, git-r3/9999 conditional SRC_URI+KEYWORDS block, DOCS string->array. Only cosmetic differences (copyright year 2023 vs 2025, EVAL-NOTE line)."
+ },
+ {
+  "id": "edit-bump-007",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 0,
+  "note": "Candidate correctly made the core EAPI 7->8 bump (the primary functional change of the r1 revbump). It omitted the reference's restructuring that adds the 9999/git-r3 live-ebuild conditional (moving SRC_URI+KEYWORDS into the else branch). That scaffold is a no-op for the 0.6-r1 build (else branch equals prior behavior), so the ebuild still builds equivalently, but it is a distinct edit the reference made that the candidate lacks. RDEPEND reformat and HOMEPAGE trailing slash are cosmetic. Partial."
+ },
+ {
+  "id": "edit-bump-004",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 6,
+  "extra": 0,
+  "note": "Candidate renamed to 0.1.2 but kept dep block identical to the old version. Missed every functional edit: ghc 8.8.1->9.0.2, cabal 3.0.0.0->3.4.1.0, singleton-bool 0.1.5->0.1.8, tasty 1.4/1.5->1.5/1.6, tasty-expected-failure restructure, and CABAL_HACKAGE_REVISION (dropped instead of set to 1). Only cosmetic changes reproduced."
+ },
+ {
+  "id": "edit-bump-002",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 11,
+  "extra": 1,
+  "note": "Candidate only removed CABAL_HACKAGE_REVISION and bumped the filename version; it kept all the old 1.3.15 dependency bounds. It missed the reference's dep updates: upper-bound :=[profile?] on cryptohash-md5/sha1/entropy, network-info to >=0.2 <0.3, random to >=1.2.1.2 <1.4, uuid-types to >=1.0.6 <1.0.7, ghc to >=9.0.2, cabal to >=3.4.1.0, quickcheck <2.16, tasty <1.6, tasty-hunit >=0.10 <0.11, tasty-quickcheck >=0.10 <0.12. It also wrongly retained the dev-haskell/text || block that the reference removed entirely. Candidate self-flagged it could not verify bounds offline."
+ },
+ {
+  "id": "edit-bump-003",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 7,
+  "extra": 1,
+  "note": "Candidate left all dependency bounds at 0.1 values and only dropped CABAL_HACKAGE_REVISION. Missed ghc 8.8.1->9.0.2, cabal 3.0.0.0->3.4.1.0, quickcheck upper 2.15->2.18, quickcheck-instances 0.4->0.5, test-framework(-quickcheck2)->tasty/tasty-quickcheck, revision 2->1 (reference keeps it at 1, candidate wrongly deleted it), and did not drop pkg_pretend."
+ },
+ {
+  "id": "edit-bump-006",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 6,
+  "extra": 0,
+  "note": "Candidate is byte-identical to the before ebuild (plus an EVAL-NOTE admitting it made no change). It omitted every functional edit of the reference: CABAL_HACKAGE_REVISION 3->9, added CABAL_CHDEPS block, added text RDEPEND and relaxed unicode-data upper bound (0.5->0.9), ghc 8.4.3->9.0.2, cabal 2.2->3.4.1, quickcheck upper 2.15->2.18 plus added text test dep. No effective change made."
+ },
+ {
+  "id": "edit-bump-002",
+  "arm": "with",
+  "verdict": "partial",
+  "missing": 7,
+  "extra": 1,
+  "note": "Version bumped correctly, but candidate kept the OLD dep bounds instead of the reference's updated ones: missing ghc>=9.0.2, uuid-types 1.0.6, random 1.2.1.2, network-info 0.2/0.3, cabal 3.4.1.0, tasty/quickcheck/tasty-hunit upper-bound bumps, and removal of the text || block. Extra/wrong: dropped CABAL_HACKAGE_REVISION which the reference retains (=2)."
+ },
+ {
+  "id": "edit-bump-005",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 4,
+  "extra": 0,
+  "note": "Candidate is a near-verbatim copy of the before ebuild plus an EVAL-NOTE; reproduced none of the reference's functional edits (EAPI 7->8, git-r3 9999 conditional/HOMEPAGE change, DOCS string->array, elisp-enable-tests ert test)."
+ },
+ {
+  "id": "edit-bump-001",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 2,
+  "extra": 1,
+  "note": "Reference revbump = EAPI 7->8 plus adding the 9999/git-r3 live-ebuild branch (SRC_URI kept as ${P}.tar.gz, KEYWORDS moved inside else-branch, DOCS as array, HOMEPAGE trailing slash). Candidate kept EAPI=7, did none of these, and instead invented a distfile rename to ${P}.gh.tar.gz that the reference never made. All real edits missed; introduced a wrong one."
+ },
+ {
+  "id": "edit-bump-004",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 6,
+  "extra": 1,
+  "note": "Candidate only bumped the filename; kept all old dependency bounds. Missed ghc 8.8.1->9.0.2, cabal 3.0.0.0->3.4.1.0, singleton-bool 0.1.5->0.1.8, tasty ->1.5/<1.6, tasty-expected-failure ||-group -> single 0.12.3/<0.13, and CABAL_HACKAGE_REVISION 4->1 (candidate deleted it instead). No functional edits reproduced."
+ },
+ {
+  "id": "edit-bump-003",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 7,
+  "extra": 1,
+  "note": "Candidate kept all the old 0.1 dependency bounds and structure instead of the reference's 0.1.3 updates: ghc 8.8.1 (ref 9.0.2), cabal 3.0.0.0 (ref 3.4.1.0), quickcheck <2.15 (ref <2.18), quickcheck-instances <0.4 (ref <0.5), retained test-framework/test-framework-quickcheck2 (ref replaced with tasty/tasty-quickcheck), kept pkg_pretend block (ref removed it). It also dropped CABAL_HACKAGE_REVISION entirely (ref set =1). Effectively only a filename/version bump with none of the substantive edits; the ebuild's deps are wrong for 0.1.3."
+ },
+ {
+  "id": "edit-bump-000",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 8,
+  "extra": 0,
+  "note": "Candidate is the unchanged 1.1.3.0 ebuild. Missed all functional edits: IUSE +gmp->+simd, ghc >=8.4.3->9.0.2, removed gmp? dep, cabal 2.2.0.1->3.4.1.0, rewritten bounded test deps, added src_prepare+cabal-mksetup, cabal_flag gmp libgmp->simd simd, CABAL_HACKAGE_REVISION=3. Explicitly declined to update, citing offline limits."
+ },
+ {
+  "id": "edit-bump-008",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 0,
+  "note": "Candidate correctly did EAPI 7->8. But it omitted the reference's main restructure: wrapping SRC_URI/S/KEYWORDS in a PV==*9999* branch with git-r3 inherit + EGIT_REPO_URI for a live ebuild. Cosmetic-only misses (HOMEPAGE trailing slash, DOCS string vs array) ignored. The git-r3 live-branch addition is a real functional edit that is missing."
+ },
+ {
+  "id": "edit-bump-010",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 6,
+  "extra": 0,
+  "note": "Candidate left the ebuild effectively identical to 1.4.27 (only the filename bumped). It omitted every real 1.4.33 change: new MY_URI upload path (2025/03), linux-* SRC_URI filenames, and the entire src_install restructure (myarch dir instead of release/build, dolib.so ${PN}.so instead of .so.${PV} with swapped dosym targets, doins ftd2xx.h/WinTypes.h from cwd, dodoc examples, release-notes.txt instead of release/ReadMe.txt). Its own EVAL-NOTE admits it couldn't verify the URL. The result would fail to fetch and fail to install; broken bump."
+ },
+ {
+  "id": "edit-bump-008",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 4,
+  "extra": 0,
+  "note": "Candidate is byte-identical to the before ebuild (only an EVAL-NOTE comment added); it reproduced none of the reference's revbump edits: EAPI 7->8, added 9999/git-r3 conditional block, HOMEPAGE trailing slash, DOCS string->array. No functional change made."
+ },
+ {
+  "id": "edit-bump-009",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 4,
+  "extra": 0,
+  "note": "Candidate is byte-for-byte the before ebuild (renamed) plus an EVAL-NOTE; it performed none of the reference's dependency changes: ghc 8.8.1->9.0.2, cabal 3.0.0.0->3.4.1.0, removal of foldable1-classes-compat/hashable from RDEPEND, and adding them as test? deps. Also missing hackport-version comment update."
+ },
+ {
+  "id": "edit-bump-009",
+  "arm": "with",
+  "verdict": "partial",
+  "missing": 3,
+  "extra": 0,
+  "note": "Version bump applied, but all dependency metadata carried over unchanged. Missing: RDEPEND restructure (drop foldable1/hashable, bump ghc min to 9.0.2), DEPEND cabal 3.0.0.0->3.4.1.0, and new test? block for foldable1/hashable. EVAL-NOTE ignored as cosmetic."
+ },
+ {
+  "id": "edit-bump-013",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 6,
+  "extra": 0,
+  "note": "Candidate is the unchanged before-ebuild plus an EVAL-NOTE; it made none of the reference edits: CABAL_HACKAGE_REVISION=5, HOMEPAGE http->https, RDEPEND ghc 8.4.3->9.0.2, cabal 2.2.0.1->3.4.1.0, removal of CABAL_CHDEPS block, hackport version bump. All omitted."
+ },
+ {
+  "id": "edit-bump-014",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 5,
+  "extra": 0,
+  "note": "Candidate only relies on filename bump; body is identical to 0.0.4. Missing all reference edits: full RDEPEND rewrite (add crypto-token & serialise, drop basement, add version bounds), ghc bump to 9.0.2, cabal bump to 3.4.1.0, DESCRIPTION change. No functional change made."
+ },
+ {
+  "id": "edit-bump-013",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 5,
+  "extra": 0,
+  "note": "Candidate is byte-identical to the before ebuild (only added an EVAL-NOTE comment). It made none of the reference's functional edits: add CABAL_HACKAGE_REVISION=5, bump >=dev-lang/ghc-8.4.3 to 9.0.2, bump >=dev-haskell/cabal-2.2.0.1 to 3.4.1.0, remove the CABAL_CHDEPS block, and drop the now-unnecessary SRC_URI/IUSE lines. No effective change reproduced."
+ },
+ {
+  "id": "edit-bump-016",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 8,
+  "extra": 0,
+  "note": "Candidate is a byte-for-byte copy of the 0.3.0.5-r2 before-file (plus an EVAL-NOTE); no bump performed. All reference edits omitted: RDEPEND rewrite (drop extensible-exceptions, quickcheck>=2.9.2 <3, random <1.4, ghc>=9.0.2), DEPEND cabal>=3.4.1.0, remove CABAL_CHDEPS block, add src_prepare with cabal-mksetup, updated DESCRIPTION/HOMEPAGE, remove SRC_URI (uses hackage default), remove IUSE."
+ },
+ {
+  "id": "edit-bump-014",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 6,
+  "extra": 1,
+  "note": "Candidate kept the entire 0.0.4 body under the 0.0.9 filename. Omitted every real bump edit: DESCRIPTION change, SRC_URI/IUSE removal, full RDEPEND rewrite with version bounds (added crypto-token/serialise, removed basement, ghc 9.0.2), and cabal 3.4.1.0. Added only an EVAL-NOTE. No functional bump reproduced."
+ },
+ {
+  "id": "edit-bump-011",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 8,
+  "extra": 0,
+  "note": "Candidate is the unchanged 1.0.2 ebuild; it explicitly kept old values. Missing all reference edits: CABAL_HACKAGE_REVISION 3->1 and removal of revised-cabal SRC_URI/CABAL_FILE/CABAL_DISTFILE/src_prepare/dos2unix BDEPEND; hackport version change; aeson bounds ->2.2.2.0/<2.3; added parsec dep; unordered-containers/vector bumps; ghc 8.4.3->9.0.2; added text deps and the text version || block; DEPEND cabal ->3.4.1.0 and test deps switched from hspec to base-orphans/tasty/tasty-hunit. No effective bump performed."
+ },
+ {
+  "id": "edit-bump-012",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 4,
+  "extra": 0,
+  "note": "Candidate did the EAPI 7->8 bump correctly but missed the reference's substantive changes: added git-r3/9999 conditional block with EGIT_REPO_URI (and KEYWORDS moved into else branch), replaced RESTRICT=test with elisp-enable-tests ert test, removed the src_prepare @VERSION@ sed entirely, and converted DOCS string to array. Candidate kept the old test-restriction and src_prepare logic."
+ },
+ {
+  "id": "edit-bump-010",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 3,
+  "extra": 0,
+  "note": "Candidate is the old 1.4.27 ebuild essentially unchanged. Missed all real edits: SRC_URI date path (2022/07->2025/03 via MY_URI) plus linux- filename prefix; and the full src_install rewrite (myarch layout / cd \"${myarch}\", dolib.so ${PN}.so, doins ftd2xx.h WinTypes.h without release/ prefix, dodoc release-notes.txt instead of ReadMe.txt). Kept old release/build layout, so it would not build against the new tarball."
+ },
+ {
+  "id": "edit-bump-016",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 7,
+  "extra": 0,
+  "note": "Candidate is byte-identical to the before file (only an EVAL-NOTE appended); no functional bump performed. Reference made numerous edits: dropped extensible-exceptions dep, bumped quickcheck to >=2.9.2 <3, random cap to <1.4, ghc to >=9.0.2, cabal to >=3.4.1.0, removed CABAL_CHDEPS, added src_prepare with cabal-mksetup, and updated DESCRIPTION/HOMEPAGE. None reproduced."
+ },
+ {
+  "id": "edit-bump-011",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 5,
+  "extra": 4,
+  "note": "Candidate effectively kept the old 1.0.2 ebuild. Missed: RDEPEND rewrite (aeson 2.2.2, added parsec, unordered-containers/vector bumps, ghc 9.0.2, new text || block), DEPEND rewrite (cabal 3.4.1.0, new test deps base-orphans/tasty/tasty-hunit), CABAL_HACKAGE_REVISION 3->1, simplified SRC_URI (removed revision fetch), and removal of CABAL_FILE/CABAL_DISTFILE/BDEPEND dos2unix/src_prepare. Candidate wrongly retained the revision-cabal SRC_URI, src_prepare, BDEPEND, and stale dep bounds. Self-flagged the gap in an EVAL-NOTE."
+ },
+ {
+  "id": "fix-019",
+  "arm": "with",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 0,
+  "note": "Candidate correctly dropped both LIBSUBDIR settings (the export and the emake arg), but omitted the reference's replacement line `export LIBDIR=\"\\$(PREFIX)/$(get_libdir)\"` in src_configure. Without it the libdir override intended by the change is lost. Copyright-year difference is cosmetic."
+ },
+ {
+  "id": "edit-bump-017",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 4,
+  "extra": 0,
+  "note": "Reference -r1 bumped CABAL_HACKAGE_REVISION 2->6, ghc dep >=8.8.1 -> >=9.0.2, cabal 3.0.0.0 -> 3.4.1.0, and rewrote tasty/tasty-hunit/tasty-quickcheck bounds. Candidate only touched CABAL_HACKAGE_REVISION and set it to the wrong value (3, not 6) and made none of the dependency changes."
+ },
+ {
+  "id": "fix-020",
+  "arm": "with",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 0,
+  "note": "Candidate enabled py3.15 (added python3_15) matching the intent, but reference set PYTHON_COMPAT to {12..15}, dropping python3_11. Candidate used {11..15}, keeping python3_11 that the reference removed. Core edit present, one range edit missed."
+ },
+ {
+  "id": "fix-022",
+  "arm": "with",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate enabled py3.14 via PYTHON_COMPAT {11..14}, matching reference. Only difference is cosmetic copyright year (candidate kept 2024 vs reference 2026)."
+ },
+ {
+  "id": "fix-022",
+  "arm": "without",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate enabled py3.14 via PYTHON_COMPAT=( python3_{11..14} ), matching the reference. Only difference is copyright year (cosmetic)."
+ },
+ {
+  "id": "fix-020",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 0,
+  "note": "Candidate added py3.15 (main intent) but set PYTHON_COMPAT=(python3_{11..15}) whereas reference bumped the lower bound to python3_{12..15}, dropping py3.11. Upper end correct; lower bound not raised."
+ },
+ {
+  "id": "edit-bump-007",
+  "arm": "with",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 0,
+  "note": "EAPI 7->8 bump present (correct). Missing the reference's 9999 live-ebuild conditional block (git-r3 inherit + EGIT_REPO_URI, with SRC_URI/KEYWORDS moved into the else branch). HOMEPAGE trailing-slash difference is cosmetic. Ebuild is otherwise valid."
+ },
+ {
+  "id": "fix-018",
+  "arm": "without",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate identical to reference: added 'selinux' to IUSE and 'selinux? ( sec-policy/selinux-gpg )' to RDEPEND."
+ },
+ {
+  "id": "fix-019",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 0,
+  "note": "Candidate correctly dropped LIBSUBDIR from src_configure and src_install, but omitted the reference's replacement `export LIBDIR=\"\\$(PREFIX)/$(get_libdir)\"` in src_configure, which sets the lib install path. Functional edit missing."
+ },
+ {
+  "id": "fix-023",
+  "arm": "with",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 0,
+  "note": "Candidate added py3.15 (PYTHON_COMPAT python3_{11..15}), achieving the stated intent. But reference used python3_{12..15}, also dropping py3.11; candidate kept 3.11, so it omitted the lower-bound bump. Copyright year diff is cosmetic."
+ },
+ {
+  "id": "edit-bump-015",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 7,
+  "extra": 0,
+  "note": "Version bump to 0.11.0 done via filename; candidate correctly removed CABAL_HACKAGE_REVISION and the CABAL_CHDEPS fgl workaround. But it kept nearly all old dependency bounds/state that the reference updated: RESTRICT=\"test\" not removed; aeson still <2.2 (should be <2.3); diff still <0.5 (should be <1.1); quickcheck still <2.15 (should be <2.17); ghc still >=8.10.6 (should be >=9.0.2); fgl lacks the <5.9 upper bound; cabal still >=3.2.1.0 (should be >=3.4.1.0). Most functional dep edits missed."
+ },
+ {
+  "id": "fix-023",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 0,
+  "note": "Candidate added py3.15 (PYTHON_COMPAT {11..15}) satisfying the enable-3.15 intent, but reference used {12..15}, dropping py3_11. Candidate omitted the py3_11 removal, keeping stale support. Copyright year diff is cosmetic."
+ },
+ {
+  "id": "edit-bump-015",
+  "arm": "with",
+  "verdict": "partial",
+  "missing": 7,
+  "extra": 0,
+  "note": "Candidate got the structural removals right (dropped CABAL_HACKAGE_REVISION, CABAL_CHDEPS block, and the fgl || (...) alternative block), matching the reference. But it failed the core of the bump: nearly all dependency bounds stayed at 0.9.0 values. Missing edits vs truth: aeson upper bound (<2.2 vs ref <2.3), diff (<0.5 vs <1.1), quickcheck (<2.15 vs <2.17), ghc (>=8.10.6 vs >=9.0.2), cabal (>=3.2.1.0 vs >=3.4.1.0), the new versioned fgl bound line (>=dev-haskell/fgl-5.7.0 <5.9), and it kept RESTRICT=\"test\" (plus its comment) which the reference removed. No extra unjustified edits."
+ },
+ {
+  "id": "fix-024",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 2,
+  "extra": 0,
+  "note": "Candidate enabled py3.15 (added python3_15) matching the core intent, but missed two reference edits: trimming PYTHON_COMPAT to python3_{12..15} (dropping python3_11 and pypy3_11) and renaming the upstream repo iterative->tqdm in PYPI_VERIFY_REPO and HOMEPAGE. Ebuild still valid."
+ },
+ {
+  "id": "fix-028",
+  "arm": "without",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate sets PYTHON_COMPAT=( python3_{12..15} ), matching the reference's sole change (12..14 -> 12..15) to enable py3.15."
+ },
+ {
+  "id": "fix-028",
+  "arm": "with",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate sets PYTHON_COMPAT=( python3_{12..15} ), matching the reference's only edit (enabling py3.15). No other differences."
+ },
+ {
+  "id": "fix-026",
+  "arm": "without",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate changed sys-libs/zlib:= to virtual/zlib:=, matching the reference's sole functional edit (copyright year is cosmetic)."
+ },
+ {
+  "id": "edit-bump-017",
+  "arm": "with",
+  "verdict": "partial",
+  "missing": 4,
+  "extra": 0,
+  "note": "Candidate bumped CABAL_HACKAGE_REVISION but to 3 (ref went 2->6, wrong value). Missed ghc dep bump (8.8.1->9.0.2), cabal bump (3.0.0.0->3.4.1.0), and the tasty/tasty-hunit/tasty-quickcheck rework to ranged deps. Only the revision-bump intent was partially attempted, and with wrong number."
+ },
+ {
+  "id": "fix-024",
+  "arm": "with",
+  "verdict": "partial",
+  "missing": 2,
+  "extra": 0,
+  "note": "Candidate enabled py3.15 (the core intent) but did not match reference's PYTHON_COMPAT range (reference trimmed to {12..15}, dropping python3_11 and pypy3_11; candidate kept them as {11..15} pypy3_11) and missed the upstream repo rename iterative->tqdm in both PYPI_VERIFY_REPO and HOMEPAGE."
+ },
+ {
+  "id": "fix-018",
+  "arm": "with",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate identical to reference: added selinux to IUSE and selinux? ( sec-policy/selinux-gpg ) dependency."
+ },
+ {
+  "id": "fix-025",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 0,
+  "note": "Candidate added a PATCHES entry as intended, but with the wrong filename: ${P}.patch instead of the reference's ${P}-functor.patch. Since the accompanying FILESDIR patch is named -functor.patch, the candidate's reference would fail to find the patch. Core edit direction right, but the specific patch name (the load-bearing detail) is wrong, so it does not achieve the same effective change. (Removal of IUSE=\"\" is cosmetic.)"
+ },
+ {
+  "id": "fix-029",
+  "arm": "with",
+  "verdict": "partial",
+  "missing": 2,
+  "extra": 0,
+  "note": "Candidate enabled py3.14 (core intent met) but kept python3_10 (reference raised floor to 11) and kept bare pypy3 (reference removed it). PYTHON_COMPAT differs: candidate {10..14} pypy3 pypy3_11 vs reference {11..14} pypy3_11."
+ },
+ {
+  "id": "fix-029",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 2,
+  "extra": 0,
+  "note": "Candidate added python3_14 (the stated intent) but reference also dropped python3_10 and the bare pypy3 target (PYTHON_COMPAT=python3_{11..14} pypy3_11). Candidate kept them (python3_{10..14} pypy3 pypy3_11), so two functional edits are missing."
+ },
+ {
+  "id": "fix-032",
+  "arm": "without",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate made the sole functional edit: PYTHON_COMPAT python3_{11..13} -> {11..14}, adding 3.14. Only difference is the copyright year (2025 vs 2026), which is cosmetic."
+ },
+ {
+  "id": "fix-032",
+  "arm": "with",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate sets PYTHON_COMPAT to python3_{11..14}, matching the reference's sole functional edit (adding python 3.14)."
+ },
+ {
+  "id": "fix-021",
+  "arm": "with",
+  "verdict": "partial",
+  "missing": 3,
+  "extra": 0,
+  "note": "Candidate enables py3.15 testing (adds python3_15 to TESTED) and removes the redundant standalone python3_15 from COMPAT, matching part of the reference. But it omits the reference's cleanups: dropping python3_11 and pypy3_11 from PYTHON_TESTED, and bumping the t-variant range 13t->14t (kept python3_{13..15}t instead of {14..15}t). Core intent met but three functional edits missing."
+ },
+ {
+  "id": "fix-030",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 0,
+  "note": "Candidate correctly enabled ruby40 (the stated intent), but the reference also dropped ruby31 from USE_RUBY (ruby32 ruby33 ruby34 ruby40); candidate kept ruby31. Primary goal met, one functional edit omitted."
+ },
+ {
+  "id": "fix-026",
+  "arm": "with",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Reference change is sys-libs/zlib:= -> virtual/zlib:=; candidate made exactly this edit. Only remaining diff is virtual/opengl vs virtual/zlib ordering within COMMON_DEPEND, which is cosmetic."
+ },
+ {
+  "id": "fix-025",
+  "arm": "with",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 1,
+  "note": "Candidate correctly recognized a PATCHES array must be added, but references the wrong filename (${P}.patch vs reference's ${P}-functor.patch). The specific patch basename is load-bearing and does not match the file added to FILESDIR, so the fix is non-functional as written."
+ },
+ {
+  "id": "fix-021",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 3,
+  "extra": 0,
+  "note": "Candidate did enable py3.15 testing (added 3.15 to PYTHON_TESTED), the core intent. But it missed the reference's accompanying edits: dropping python3_11 from PYTHON_TESTED, dropping pypy3_11, and narrowing free-threaded range from python3_{13..15}t to python3_{14..15}t (ref TESTED=python3_{12..15}, COMPAT t-part={14..15}t vs candidate TESTED=python3_{11..15} pypy3_11, t-part={13..15}t)."
+ },
+ {
+  "id": "fix-035",
+  "arm": "without",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate added usr/bin/papers-thumbnailer to QA_FLAGS_IGNORED, same functional effect as reference. Only differences are cosmetic (single-line vs multiline value, copyright year)."
+ },
+ {
+  "id": "fix-030",
+  "arm": "with",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 0,
+  "note": "Candidate added ruby40 (the main intent) but kept ruby31; reference dropped ruby31, setting USE_RUBY=\"ruby32 ruby33 ruby34 ruby40\". Missing the ruby31 removal."
+ },
+ {
+  "id": "fix-027",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 5,
+  "extra": 0,
+  "note": "Candidate is identical to before/ (only appended an EVAL-NOTE). None of the reference's functional edits applied: pcre alternative dep, geoip->libmaxminddb, gtk+ 2->3, ipv6 libnet dep, and GTK_BUILD_TYPE=GTK3 cmake arg all missing."
+ },
+ {
+  "id": "fix-034",
+  "arm": "without",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate correctly changed PYTHON_FULLY_TESTED from python3_{11..13} to python3_{12..13}, the sole functional edit. Only difference from reference is copyright year (2025 vs 2026), which is cosmetic."
+ },
+ {
+  "id": "fix-027",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 5,
+  "extra": 1,
+  "note": "Candidate missed every functional edit of the 9999 sync: libpcre alternative (|| dev-libs/libpcre dev-libs/libpcre2), geoip->dev-libs/libmaxminddb, gtk+:2->gtk+:3, ipv6 libnet dep, and GTK_BUILD_TYPE=GTK3 + comment removal. It only reordered app-alternatives/lex (unjustified) and added an EVAL-NOTE admitting it didn't apply the diff."
+ },
+ {
+  "id": "fix-031",
+  "arm": "with",
+  "verdict": "wrong",
+  "missing": 1,
+  "extra": 1,
+  "note": "Reference change was examples dep media-libs/libsdl2[sound,video] -> media-libs/libsdl3. Candidate kept libsdl2 (missed the fix) and instead changed jgmodule dep from jg:1= to >=media-libs/jg-2.0.0, an unjustified edit the reference did not make."
+ },
+ {
+  "id": "fix-034",
+  "arm": "with",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate correctly changed PYTHON_FULLY_TESTED from python3_{11..13} to python3_{12..13}, matching reference. Only difference is copyright year (cosmetic)."
+ },
+ {
+  "id": "fix-033",
+  "arm": "with",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate bumped RUST_MIN_VER from 1.75.0 to 1.88.0, identical to reference (diff empty)."
+ },
+ {
+  "id": "fix-031",
+  "arm": "without",
+  "verdict": "wrong",
+  "missing": 1,
+  "extra": 1,
+  "note": "Reference bumped the examples dep media-libs/libsdl2[sound,video] to media-libs/libsdl3. Candidate missed this entirely and instead wrongly changed media-libs/libsamplerate to media-libs/speexdsp (unjustified, invented), leaving libsdl2 intact."
+ },
+ {
+  "id": "fix-035",
+  "arm": "with",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate adds papers-thumbnailer to QA_FLAGS_IGNORED, matching reference in effect. Only cosmetic differences (multi-line formatting, copyright year 2025 vs 2026)."
+ },
+ {
+  "id": "fix-033",
+  "arm": "without",
+  "verdict": "partial",
+  "missing": 1,
+  "extra": 0,
+  "note": "Correctly identified the one required edit (bump RUST_MIN_VER) but set the wrong value: 1.85.0 vs reference 1.88.0. Direction right, magnitude wrong; the fix's exact target was missed."
+ },
+ {
+  "id": "edit-bump-012",
+  "arm": "with",
+  "verdict": "correct",
+  "missing": 0,
+  "extra": 0,
+  "note": "Candidate is byte-identical to reference except a trailing EVAL-NOTE comment. All functional edits reproduced: EAPI 7->8, HOMEPAGE trailing slash, 9999 git-r3 branch, SRC_URI/KEYWORDS moved into else, removed RESTRICT=test and old src_prepare, DOCS as array, elisp-enable-tests ert test."
+ }
+]

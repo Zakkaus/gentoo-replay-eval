@@ -1,0 +1,14 @@
+{
+ "id": "fix-027",
+ "sha": "8afe9f76e4d1cc180ef43e6f325fd3b1caaaef63",
+ "stratum": "fix",
+ "pkg": "net-analyzer/ettercap",
+ "ecosystem": "c-cpp-build",
+ "task": {
+  "kind": "fix",
+  "pkg": "net-analyzer/ettercap",
+  "file": "ettercap-9999.ebuild",
+  "problem": "net-analyzer/ettercap: sync 9999",
+  "bug": null
+ }
+}

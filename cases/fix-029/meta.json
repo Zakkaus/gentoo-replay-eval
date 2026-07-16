@@ -1,0 +1,14 @@
+{
+ "id": "fix-029",
+ "sha": "db256244ea67769a763a050d3d7ec29cdd246dee",
+ "stratum": "fix",
+ "pkg": "app-text/htmlmin",
+ "ecosystem": "python",
+ "task": {
+  "kind": "fix",
+  "pkg": "app-text/htmlmin",
+  "file": "htmlmin-0.1.13.ebuild",
+  "problem": "app-text/htmlmin: Enable py3.14",
+  "bug": null
+ }
+}

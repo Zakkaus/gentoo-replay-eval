@@ -1,0 +1,14 @@
+{
+ "id": "fix-030",
+ "sha": "2771862bd785ff6c9551bc5093225c52aaf05634",
+ "stratum": "fix",
+ "pkg": "dev-ruby/warden",
+ "ecosystem": "other",
+ "task": {
+  "kind": "fix",
+  "pkg": "dev-ruby/warden",
+  "file": "warden-1.2.9-r1.ebuild",
+  "problem": "dev-ruby/warden: enable ruby40",
+  "bug": null
+ }
+}

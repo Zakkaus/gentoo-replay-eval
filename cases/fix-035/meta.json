@@ -1,0 +1,14 @@
+{
+ "id": "fix-035",
+ "sha": "d1a7a66f64325d1365663a9ad966c4b3dce52e15",
+ "stratum": "fix",
+ "pkg": "app-text/papers",
+ "ecosystem": "rust-go",
+ "task": {
+  "kind": "fix",
+  "pkg": "app-text/papers",
+  "file": "papers-49.2.ebuild",
+  "problem": "app-text/papers: add papers-thumbnailer to QA_FLAGS_IGNORED",
+  "bug": null
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "id": "fix-022",
+ "sha": "c761b7282bd523088c89a14edbb691c167d54b54",
+ "stratum": "fix",
+ "pkg": "dev-python/pgzero",
+ "ecosystem": "python",
+ "task": {
+  "kind": "fix",
+  "pkg": "dev-python/pgzero",
+  "file": "pgzero-1.2.1-r2.ebuild",
+  "problem": "dev-python/pgzero: Enable py3.14",
+  "bug": null
+ }
+}

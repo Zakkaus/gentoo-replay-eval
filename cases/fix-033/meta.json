@@ -1,0 +1,14 @@
+{
+ "id": "fix-033",
+ "sha": "7dc32b2a153a689d4e30bf2426bf63d963b9aab1",
+ "stratum": "fix",
+ "pkg": "dev-python/pydantic",
+ "ecosystem": "python",
+ "task": {
+  "kind": "fix",
+  "pkg": "dev-python/pydantic",
+  "file": "pydantic-2.13.0_beta1.ebuild",
+  "problem": "dev-python/pydantic: Bump RUST_MIN_VER",
+  "bug": null
+ }
+}

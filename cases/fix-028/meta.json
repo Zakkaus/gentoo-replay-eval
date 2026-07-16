@@ -1,0 +1,14 @@
+{
+ "id": "fix-028",
+ "sha": "9b90e0198fdb228d1a27b288938c304701088e0c",
+ "stratum": "fix",
+ "pkg": "dev-python/croniter",
+ "ecosystem": "python",
+ "task": {
+  "kind": "fix",
+  "pkg": "dev-python/croniter",
+  "file": "croniter-6.2.3.ebuild",
+  "problem": "dev-python/croniter: Enable py3.15",
+  "bug": null
+ }
+}

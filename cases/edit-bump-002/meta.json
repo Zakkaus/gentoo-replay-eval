@@ -1,0 +1,15 @@
+{
+ "id": "edit-bump-002",
+ "sha": "8e3115be9c1be7e034df317e831f350ceab2a8d3",
+ "stratum": "edit-bump",
+ "pkg": "dev-haskell/uuid",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "dev-haskell/uuid",
+  "from_ver": "1.3.15-r1",
+  "to_ver": "1.3.16.1",
+  "old_file": "uuid-1.3.15-r1.ebuild",
+  "new_file": "uuid-1.3.16.1.ebuild"
+ }
+}

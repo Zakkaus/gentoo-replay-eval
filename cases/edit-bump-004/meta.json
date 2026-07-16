@@ -1,0 +1,15 @@
+{
+ "id": "edit-bump-004",
+ "sha": "62f924522d5cc6acbfebf5b132fd1721b7db3958",
+ "stratum": "edit-bump",
+ "pkg": "dev-haskell/lukko",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "dev-haskell/lukko",
+  "from_ver": "0.1.1.3-r1",
+  "to_ver": "0.1.2",
+  "old_file": "lukko-0.1.1.3-r1.ebuild",
+  "new_file": "lukko-0.1.2.ebuild"
+ }
+}

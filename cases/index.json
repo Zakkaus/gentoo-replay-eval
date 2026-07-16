@@ -1,0 +1,524 @@
+[
+ {
+  "id": "edit-bump-000",
+  "sha": "908af9528ed78fa41ca2365e0ce58f0cfb886dbb",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/bitvec",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/bitvec",
+   "from_ver": "1.1.3.0",
+   "to_ver": "1.1.5.0",
+   "old_file": "bitvec-1.1.3.0.ebuild",
+   "new_file": "bitvec-1.1.5.0.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-001",
+  "sha": "166efdff31ddf1c2ac2795e8c3de5bca9601eae9",
+  "stratum": "edit-bump",
+  "pkg": "app-emacs/treepy",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "app-emacs/treepy",
+   "from_ver": "0.1.2",
+   "to_ver": "0.1.2-r1",
+   "old_file": "treepy-0.1.2.ebuild",
+   "new_file": "treepy-0.1.2-r1.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-002",
+  "sha": "8e3115be9c1be7e034df317e831f350ceab2a8d3",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/uuid",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/uuid",
+   "from_ver": "1.3.15-r1",
+   "to_ver": "1.3.16.1",
+   "old_file": "uuid-1.3.15-r1.ebuild",
+   "new_file": "uuid-1.3.16.1.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-003",
+  "sha": "181d75e8790d46cbfd93c03aac583da78ab2e15f",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/foldable1-classes-compat",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/foldable1-classes-compat",
+   "from_ver": "0.1",
+   "to_ver": "0.1.3",
+   "old_file": "foldable1-classes-compat-0.1.ebuild",
+   "new_file": "foldable1-classes-compat-0.1.3.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-004",
+  "sha": "62f924522d5cc6acbfebf5b132fd1721b7db3958",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/lukko",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/lukko",
+   "from_ver": "0.1.1.3-r1",
+   "to_ver": "0.1.2",
+   "old_file": "lukko-0.1.1.3-r1.ebuild",
+   "new_file": "lukko-0.1.2.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-005",
+  "sha": "5592cdf4338db2ee0c5d5dc33b0fc3f341326ef9",
+  "stratum": "edit-bump",
+  "pkg": "app-emacs/yaml-mode",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "app-emacs/yaml-mode",
+   "from_ver": "0.0.16",
+   "to_ver": "0.0.16-r1",
+   "old_file": "yaml-mode-0.0.16.ebuild",
+   "new_file": "yaml-mode-0.0.16-r1.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-006",
+  "sha": "ec0eddb84a8c13050b9816bb5e3cd1f0fe01f1e9",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/unicode-transforms",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/unicode-transforms",
+   "from_ver": "0.4.0.1",
+   "to_ver": "0.4.0.1-r1",
+   "old_file": "unicode-transforms-0.4.0.1.ebuild",
+   "new_file": "unicode-transforms-0.4.0.1-r1.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-007",
+  "sha": "390e47bf8ce3f3e37fa5978c6ac782d417800ec3",
+  "stratum": "edit-bump",
+  "pkg": "app-emacs/pkg-info",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "app-emacs/pkg-info",
+   "from_ver": "0.6",
+   "to_ver": "0.6-r1",
+   "old_file": "pkg-info-0.6.ebuild",
+   "new_file": "pkg-info-0.6-r1.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-008",
+  "sha": "300f4ef0612c8ec91c5fae9c4ebc8cf38c02b6be",
+  "stratum": "edit-bump",
+  "pkg": "app-emacs/expand-region",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "app-emacs/expand-region",
+   "from_ver": "1.0.0",
+   "to_ver": "1.0.0-r1",
+   "old_file": "expand-region-1.0.0.ebuild",
+   "new_file": "expand-region-1.0.0-r1.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-009",
+  "sha": "1aef57ffff805209920e4220fe3c1f5967ab7914",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/onetuple",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/onetuple",
+   "from_ver": "0.4.1.1",
+   "to_ver": "0.4.2.1",
+   "old_file": "onetuple-0.4.1.1.ebuild",
+   "new_file": "onetuple-0.4.2.1.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-010",
+  "sha": "47262e33494a5e03f70e63c49c3bfe10e483ffb8",
+  "stratum": "edit-bump",
+  "pkg": "dev-embedded/libftd2xx",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-embedded/libftd2xx",
+   "from_ver": "1.4.27",
+   "to_ver": "1.4.33",
+   "old_file": "libftd2xx-1.4.27.ebuild",
+   "new_file": "libftd2xx-1.4.33.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-011",
+  "sha": "21a534d17969cf6b50647ee8e3e973ef0379606b",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/microstache",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/microstache",
+   "from_ver": "1.0.2",
+   "to_ver": "1.0.3",
+   "old_file": "microstache-1.0.2.ebuild",
+   "new_file": "microstache-1.0.3.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-012",
+  "sha": "423186474fb376ce83d9f4c529dcab3d2c40f91b",
+  "stratum": "edit-bump",
+  "pkg": "app-emacs/puppet-mode",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "app-emacs/puppet-mode",
+   "from_ver": "0.4",
+   "to_ver": "0.4-r1",
+   "old_file": "puppet-mode-0.4.ebuild",
+   "new_file": "puppet-mode-0.4-r1.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-013",
+  "sha": "d7717a2ba0a915f6c453a0f2a8dfd7ab65eab640",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/ghc-byteorder",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/ghc-byteorder",
+   "from_ver": "4.11.0.0.10",
+   "to_ver": "4.11.0.0.10-r1",
+   "old_file": "ghc-byteorder-4.11.0.0.10.ebuild",
+   "new_file": "ghc-byteorder-4.11.0.0.10-r1.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-014",
+  "sha": "b86e08ee7feb063da2bd736f031e483ceecdccb3",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/tls-session-manager",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/tls-session-manager",
+   "from_ver": "0.0.4",
+   "to_ver": "0.0.9",
+   "old_file": "tls-session-manager-0.0.4.ebuild",
+   "new_file": "tls-session-manager-0.0.9.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-015",
+  "sha": "8f586a93c0649401dd4f57d96e5befdb4997eed3",
+  "stratum": "edit-bump",
+  "pkg": "dev-util/shellcheck",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-util/shellcheck",
+   "from_ver": "0.9.0-r2",
+   "to_ver": "0.11.0",
+   "old_file": "shellcheck-0.9.0-r2.ebuild",
+   "new_file": "shellcheck-0.11.0.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-016",
+  "sha": "2f3d697098f1794befe1eacf4cae34a24b494370",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/test-framework-quickcheck2",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/test-framework-quickcheck2",
+   "from_ver": "0.3.0.5-r2",
+   "to_ver": "0.3.0.7",
+   "old_file": "test-framework-quickcheck2-0.3.0.5-r2.ebuild",
+   "new_file": "test-framework-quickcheck2-0.3.0.7.ebuild"
+  }
+ },
+ {
+  "id": "edit-bump-017",
+  "sha": "54aff3513ecc6cfbec7c29a46db8996df6d0015f",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/cryptohash-md5",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/cryptohash-md5",
+   "from_ver": "0.11.101.0",
+   "to_ver": "0.11.101.0-r1",
+   "old_file": "cryptohash-md5-0.11.101.0.ebuild",
+   "new_file": "cryptohash-md5-0.11.101.0-r1.ebuild"
+  }
+ },
+ {
+  "id": "fix-018",
+  "sha": "a012b1a420669d34288789510703c9e1c8ab811a",
+  "stratum": "fix",
+  "pkg": "app-crypt/pinentry",
+  "ecosystem": "c-cpp-build",
+  "task": {
+   "kind": "fix",
+   "pkg": "app-crypt/pinentry",
+   "file": "pinentry-1.3.2-r1.ebuild",
+   "problem": "app-crypt/pinentry: depend on sec-policy/selinux-gpg w/ USE=selinux",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-019",
+  "sha": "9eddb5d4f36122a456e3d6ed718fac53c1da7212",
+  "stratum": "fix",
+  "pkg": "dev-libs/libbpf",
+  "ecosystem": "other",
+  "task": {
+   "kind": "fix",
+   "pkg": "dev-libs/libbpf",
+   "file": "libbpf-9999.ebuild",
+   "problem": "dev-libs/libbpf: drop LIBSUBDIR settting",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-020",
+  "sha": "648fe7bdefffec7fa250a9e733c893e79f90cc2c",
+  "stratum": "fix",
+  "pkg": "dev-python/mimerender",
+  "ecosystem": "python",
+  "task": {
+   "kind": "fix",
+   "pkg": "dev-python/mimerender",
+   "file": "mimerender-0.6.0-r1.ebuild",
+   "problem": "dev-python/mimerender: Enable py3.15",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-021",
+  "sha": "508a2a50db783f9ad3345b69e64b17286d44ab7b",
+  "stratum": "fix",
+  "pkg": "dev-python/pytest",
+  "ecosystem": "python",
+  "task": {
+   "kind": "fix",
+   "pkg": "dev-python/pytest",
+   "file": "pytest-9.1.1.ebuild",
+   "problem": "dev-python/pytest: Enable testing on py3.15",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-022",
+  "sha": "c761b7282bd523088c89a14edbb691c167d54b54",
+  "stratum": "fix",
+  "pkg": "dev-python/pgzero",
+  "ecosystem": "python",
+  "task": {
+   "kind": "fix",
+   "pkg": "dev-python/pgzero",
+   "file": "pgzero-1.2.1-r2.ebuild",
+   "problem": "dev-python/pgzero: Enable py3.14",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-023",
+  "sha": "4f475d8054e63138c102446a93a138bf765966c3",
+  "stratum": "fix",
+  "pkg": "dev-python/iniparse",
+  "ecosystem": "python",
+  "task": {
+   "kind": "fix",
+   "pkg": "dev-python/iniparse",
+   "file": "iniparse-0.5.1_p20250425.ebuild",
+   "problem": "dev-python/iniparse: Enable py3.15",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-024",
+  "sha": "9fa22fa3d3c73e3e35b8980fe30e15c2a5cc1649",
+  "stratum": "fix",
+  "pkg": "dev-python/shtab",
+  "ecosystem": "python",
+  "task": {
+   "kind": "fix",
+   "pkg": "dev-python/shtab",
+   "file": "shtab-1.8.0.ebuild",
+   "problem": "dev-python/shtab: Enable py3.15",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-025",
+  "sha": "19d9b43efa6bae62c21f5d8a28b4c93dfff2557f",
+  "stratum": "fix",
+  "pkg": "dev-haskell/pgp-wordlist",
+  "ecosystem": "other",
+  "task": {
+   "kind": "fix",
+   "pkg": "dev-haskell/pgp-wordlist",
+   "file": "pgp-wordlist-0.1.0.3.ebuild",
+   "problem": "dev-haskell/pgp-wordlist: Add missing patch",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-026",
+  "sha": "d5792bc8c821103c8bf34dfc6dad6f60b0074573",
+  "stratum": "fix",
+  "pkg": "dev-games/aseprite",
+  "ecosystem": "python",
+  "task": {
+   "kind": "fix",
+   "pkg": "dev-games/aseprite",
+   "file": "aseprite-1.3.13.ebuild",
+   "problem": "dev-games/aseprite: update zlib dep",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-027",
+  "sha": "8afe9f76e4d1cc180ef43e6f325fd3b1caaaef63",
+  "stratum": "fix",
+  "pkg": "net-analyzer/ettercap",
+  "ecosystem": "c-cpp-build",
+  "task": {
+   "kind": "fix",
+   "pkg": "net-analyzer/ettercap",
+   "file": "ettercap-9999.ebuild",
+   "problem": "net-analyzer/ettercap: sync 9999",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-028",
+  "sha": "9b90e0198fdb228d1a27b288938c304701088e0c",
+  "stratum": "fix",
+  "pkg": "dev-python/croniter",
+  "ecosystem": "python",
+  "task": {
+   "kind": "fix",
+   "pkg": "dev-python/croniter",
+   "file": "croniter-6.2.3.ebuild",
+   "problem": "dev-python/croniter: Enable py3.15",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-029",
+  "sha": "db256244ea67769a763a050d3d7ec29cdd246dee",
+  "stratum": "fix",
+  "pkg": "app-text/htmlmin",
+  "ecosystem": "python",
+  "task": {
+   "kind": "fix",
+   "pkg": "app-text/htmlmin",
+   "file": "htmlmin-0.1.13.ebuild",
+   "problem": "app-text/htmlmin: Enable py3.14",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-030",
+  "sha": "2771862bd785ff6c9551bc5093225c52aaf05634",
+  "stratum": "fix",
+  "pkg": "dev-ruby/warden",
+  "ecosystem": "other",
+  "task": {
+   "kind": "fix",
+   "pkg": "dev-ruby/warden",
+   "file": "warden-1.2.9-r1.ebuild",
+   "problem": "dev-ruby/warden: enable ruby40",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-031",
+  "sha": "f5a2250bd40732c33d9e887b345f53ead66f4bb3",
+  "stratum": "fix",
+  "pkg": "games-emulation/bsnes-jg",
+  "ecosystem": "other",
+  "task": {
+   "kind": "fix",
+   "pkg": "games-emulation/bsnes-jg",
+   "file": "bsnes-jg-9999.ebuild",
+   "problem": "games-emulation/bsnes-jg: update dependency",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-032",
+  "sha": "b3b8bec1f994cf67d15d6d0770ec9b5a3c48bdff",
+  "stratum": "fix",
+  "pkg": "dev-python/pycpio",
+  "ecosystem": "python",
+  "task": {
+   "kind": "fix",
+   "pkg": "dev-python/pycpio",
+   "file": "pycpio-9999.ebuild",
+   "problem": "dev-python/pycpio: add python 3.14 to 9999",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-033",
+  "sha": "7dc32b2a153a689d4e30bf2426bf63d963b9aab1",
+  "stratum": "fix",
+  "pkg": "dev-python/pydantic",
+  "ecosystem": "python",
+  "task": {
+   "kind": "fix",
+   "pkg": "dev-python/pydantic",
+   "file": "pydantic-2.13.0_beta1.ebuild",
+   "problem": "dev-python/pydantic: Bump RUST_MIN_VER",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-034",
+  "sha": "379f59c4d61b89d927e2133f4231ca46f083118c",
+  "stratum": "fix",
+  "pkg": "dev-python/jsonpickle",
+  "ecosystem": "python",
+  "task": {
+   "kind": "fix",
+   "pkg": "dev-python/jsonpickle",
+   "file": "jsonpickle-4.1.1.ebuild",
+   "problem": "dev-python/jsonpickle: Remove py3.11 (per scipy)",
+   "bug": null
+  }
+ },
+ {
+  "id": "fix-035",
+  "sha": "d1a7a66f64325d1365663a9ad966c4b3dce52e15",
+  "stratum": "fix",
+  "pkg": "app-text/papers",
+  "ecosystem": "rust-go",
+  "task": {
+   "kind": "fix",
+   "pkg": "app-text/papers",
+   "file": "papers-49.2.ebuild",
+   "problem": "app-text/papers: add papers-thumbnailer to QA_FLAGS_IGNORED",
+   "bug": null
+  }
+ }
+]

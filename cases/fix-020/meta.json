@@ -1,0 +1,14 @@
+{
+ "id": "fix-020",
+ "sha": "648fe7bdefffec7fa250a9e733c893e79f90cc2c",
+ "stratum": "fix",
+ "pkg": "dev-python/mimerender",
+ "ecosystem": "python",
+ "task": {
+  "kind": "fix",
+  "pkg": "dev-python/mimerender",
+  "file": "mimerender-0.6.0-r1.ebuild",
+  "problem": "dev-python/mimerender: Enable py3.15",
+  "bug": null
+ }
+}

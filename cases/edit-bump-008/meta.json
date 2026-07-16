@@ -1,0 +1,15 @@
+{
+ "id": "edit-bump-008",
+ "sha": "300f4ef0612c8ec91c5fae9c4ebc8cf38c02b6be",
+ "stratum": "edit-bump",
+ "pkg": "app-emacs/expand-region",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "app-emacs/expand-region",
+  "from_ver": "1.0.0",
+  "to_ver": "1.0.0-r1",
+  "old_file": "expand-region-1.0.0.ebuild",
+  "new_file": "expand-region-1.0.0-r1.ebuild"
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "id": "edit-bump-011",
+ "sha": "21a534d17969cf6b50647ee8e3e973ef0379606b",
+ "stratum": "edit-bump",
+ "pkg": "dev-haskell/microstache",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "dev-haskell/microstache",
+  "from_ver": "1.0.2",
+  "to_ver": "1.0.3",
+  "old_file": "microstache-1.0.2.ebuild",
+  "new_file": "microstache-1.0.3.ebuild"
+ }
+}

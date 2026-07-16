@@ -1,0 +1,15 @@
+{
+ "id": "edit-bump-010",
+ "sha": "47262e33494a5e03f70e63c49c3bfe10e483ffb8",
+ "stratum": "edit-bump",
+ "pkg": "dev-embedded/libftd2xx",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "dev-embedded/libftd2xx",
+  "from_ver": "1.4.27",
+  "to_ver": "1.4.33",
+  "old_file": "libftd2xx-1.4.27.ebuild",
+  "new_file": "libftd2xx-1.4.33.ebuild"
+ }
+}

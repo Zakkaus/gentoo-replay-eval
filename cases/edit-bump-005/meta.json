@@ -1,0 +1,15 @@
+{
+ "id": "edit-bump-005",
+ "sha": "5592cdf4338db2ee0c5d5dc33b0fc3f341326ef9",
+ "stratum": "edit-bump",
+ "pkg": "app-emacs/yaml-mode",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "app-emacs/yaml-mode",
+  "from_ver": "0.0.16",
+  "to_ver": "0.0.16-r1",
+  "old_file": "yaml-mode-0.0.16.ebuild",
+  "new_file": "yaml-mode-0.0.16-r1.ebuild"
+ }
+}

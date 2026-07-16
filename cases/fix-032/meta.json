@@ -1,0 +1,14 @@
+{
+ "id": "fix-032",
+ "sha": "b3b8bec1f994cf67d15d6d0770ec9b5a3c48bdff",
+ "stratum": "fix",
+ "pkg": "dev-python/pycpio",
+ "ecosystem": "python",
+ "task": {
+  "kind": "fix",
+  "pkg": "dev-python/pycpio",
+  "file": "pycpio-9999.ebuild",
+  "problem": "dev-python/pycpio: add python 3.14 to 9999",
+  "bug": null
+ }
+}

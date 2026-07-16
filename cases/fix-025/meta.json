@@ -1,0 +1,14 @@
+{
+ "id": "fix-025",
+ "sha": "19d9b43efa6bae62c21f5d8a28b4c93dfff2557f",
+ "stratum": "fix",
+ "pkg": "dev-haskell/pgp-wordlist",
+ "ecosystem": "other",
+ "task": {
+  "kind": "fix",
+  "pkg": "dev-haskell/pgp-wordlist",
+  "file": "pgp-wordlist-0.1.0.3.ebuild",
+  "problem": "dev-haskell/pgp-wordlist: Add missing patch",
+  "bug": null
+ }
+}

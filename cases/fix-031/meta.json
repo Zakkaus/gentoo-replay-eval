@@ -1,0 +1,14 @@
+{
+ "id": "fix-031",
+ "sha": "f5a2250bd40732c33d9e887b345f53ead66f4bb3",
+ "stratum": "fix",
+ "pkg": "games-emulation/bsnes-jg",
+ "ecosystem": "other",
+ "task": {
+  "kind": "fix",
+  "pkg": "games-emulation/bsnes-jg",
+  "file": "bsnes-jg-9999.ebuild",
+  "problem": "games-emulation/bsnes-jg: update dependency",
+  "bug": null
+ }
+}

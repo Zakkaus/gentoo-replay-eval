@@ -1,0 +1,15 @@
+{
+ "id": "edit-bump-017",
+ "sha": "54aff3513ecc6cfbec7c29a46db8996df6d0015f",
+ "stratum": "edit-bump",
+ "pkg": "dev-haskell/cryptohash-md5",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "dev-haskell/cryptohash-md5",
+  "from_ver": "0.11.101.0",
+  "to_ver": "0.11.101.0-r1",
+  "old_file": "cryptohash-md5-0.11.101.0.ebuild",
+  "new_file": "cryptohash-md5-0.11.101.0-r1.ebuild"
+ }
+}

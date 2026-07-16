@@ -1,0 +1,14 @@
+{
+ "id": "fix-021",
+ "sha": "508a2a50db783f9ad3345b69e64b17286d44ab7b",
+ "stratum": "fix",
+ "pkg": "dev-python/pytest",
+ "ecosystem": "python",
+ "task": {
+  "kind": "fix",
+  "pkg": "dev-python/pytest",
+  "file": "pytest-9.1.1.ebuild",
+  "problem": "dev-python/pytest: Enable testing on py3.15",
+  "bug": null
+ }
+}

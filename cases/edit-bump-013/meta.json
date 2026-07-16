@@ -1,0 +1,15 @@
+{
+ "id": "edit-bump-013",
+ "sha": "d7717a2ba0a915f6c453a0f2a8dfd7ab65eab640",
+ "stratum": "edit-bump",
+ "pkg": "dev-haskell/ghc-byteorder",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "dev-haskell/ghc-byteorder",
+  "from_ver": "4.11.0.0.10",
+  "to_ver": "4.11.0.0.10-r1",
+  "old_file": "ghc-byteorder-4.11.0.0.10.ebuild",
+  "new_file": "ghc-byteorder-4.11.0.0.10-r1.ebuild"
+ }
+}

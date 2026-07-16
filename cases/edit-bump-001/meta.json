@@ -1,0 +1,15 @@
+{
+ "id": "edit-bump-001",
+ "sha": "166efdff31ddf1c2ac2795e8c3de5bca9601eae9",
+ "stratum": "edit-bump",
+ "pkg": "app-emacs/treepy",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "app-emacs/treepy",
+  "from_ver": "0.1.2",
+  "to_ver": "0.1.2-r1",
+  "old_file": "treepy-0.1.2.ebuild",
+  "new_file": "treepy-0.1.2-r1.ebuild"
+ }
+}

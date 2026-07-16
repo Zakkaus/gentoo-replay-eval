@@ -1,0 +1,14 @@
+{
+ "id": "fix-024",
+ "sha": "9fa22fa3d3c73e3e35b8980fe30e15c2a5cc1649",
+ "stratum": "fix",
+ "pkg": "dev-python/shtab",
+ "ecosystem": "python",
+ "task": {
+  "kind": "fix",
+  "pkg": "dev-python/shtab",
+  "file": "shtab-1.8.0.ebuild",
+  "problem": "dev-python/shtab: Enable py3.15",
+  "bug": null
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "id": "fix-026",
+ "sha": "d5792bc8c821103c8bf34dfc6dad6f60b0074573",
+ "stratum": "fix",
+ "pkg": "dev-games/aseprite",
+ "ecosystem": "python",
+ "task": {
+  "kind": "fix",
+  "pkg": "dev-games/aseprite",
+  "file": "aseprite-1.3.13.ebuild",
+  "problem": "dev-games/aseprite: update zlib dep",
+  "bug": null
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "id": "edit-bump-003",
+ "sha": "181d75e8790d46cbfd93c03aac583da78ab2e15f",
+ "stratum": "edit-bump",
+ "pkg": "dev-haskell/foldable1-classes-compat",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "dev-haskell/foldable1-classes-compat",
+  "from_ver": "0.1",
+  "to_ver": "0.1.3",
+  "old_file": "foldable1-classes-compat-0.1.ebuild",
+  "new_file": "foldable1-classes-compat-0.1.3.ebuild"
+ }
+}

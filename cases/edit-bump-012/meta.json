@@ -1,0 +1,15 @@
+{
+ "id": "edit-bump-012",
+ "sha": "423186474fb376ce83d9f4c529dcab3d2c40f91b",
+ "stratum": "edit-bump",
+ "pkg": "app-emacs/puppet-mode",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "app-emacs/puppet-mode",
+  "from_ver": "0.4",
+  "to_ver": "0.4-r1",
+  "old_file": "puppet-mode-0.4.ebuild",
+  "new_file": "puppet-mode-0.4-r1.ebuild"
+ }
+}

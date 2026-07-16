@@ -1,0 +1,15 @@
+{
+ "id": "edit-bump-016",
+ "sha": "2f3d697098f1794befe1eacf4cae34a24b494370",
+ "stratum": "edit-bump",
+ "pkg": "dev-haskell/test-framework-quickcheck2",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "dev-haskell/test-framework-quickcheck2",
+  "from_ver": "0.3.0.5-r2",
+  "to_ver": "0.3.0.7",
+  "old_file": "test-framework-quickcheck2-0.3.0.5-r2.ebuild",
+  "new_file": "test-framework-quickcheck2-0.3.0.7.ebuild"
+ }
+}

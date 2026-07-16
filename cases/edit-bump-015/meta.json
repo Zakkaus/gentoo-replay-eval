@@ -1,0 +1,15 @@
+{
+ "id": "edit-bump-015",
+ "sha": "8f586a93c0649401dd4f57d96e5befdb4997eed3",
+ "stratum": "edit-bump",
+ "pkg": "dev-util/shellcheck",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "dev-util/shellcheck",
+  "from_ver": "0.9.0-r2",
+  "to_ver": "0.11.0",
+  "old_file": "shellcheck-0.9.0-r2.ebuild",
+  "new_file": "shellcheck-0.11.0.ebuild"
+ }
+}

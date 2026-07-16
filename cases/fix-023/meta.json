@@ -1,0 +1,14 @@
+{
+ "id": "fix-023",
+ "sha": "4f475d8054e63138c102446a93a138bf765966c3",
+ "stratum": "fix",
+ "pkg": "dev-python/iniparse",
+ "ecosystem": "python",
+ "task": {
+  "kind": "fix",
+  "pkg": "dev-python/iniparse",
+  "file": "iniparse-0.5.1_p20250425.ebuild",
+  "problem": "dev-python/iniparse: Enable py3.15",
+  "bug": null
+ }
+}

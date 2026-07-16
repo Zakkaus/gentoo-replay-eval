@@ -1,0 +1,14 @@
+{
+ "id": "fix-019",
+ "sha": "9eddb5d4f36122a456e3d6ed718fac53c1da7212",
+ "stratum": "fix",
+ "pkg": "dev-libs/libbpf",
+ "ecosystem": "other",
+ "task": {
+  "kind": "fix",
+  "pkg": "dev-libs/libbpf",
+  "file": "libbpf-9999.ebuild",
+  "problem": "dev-libs/libbpf: drop LIBSUBDIR settting",
+  "bug": null
+ }
+}

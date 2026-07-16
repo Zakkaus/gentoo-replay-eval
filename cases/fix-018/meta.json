@@ -1,0 +1,14 @@
+{
+ "id": "fix-018",
+ "sha": "a012b1a420669d34288789510703c9e1c8ab811a",
+ "stratum": "fix",
+ "pkg": "app-crypt/pinentry",
+ "ecosystem": "c-cpp-build",
+ "task": {
+  "kind": "fix",
+  "pkg": "app-crypt/pinentry",
+  "file": "pinentry-1.3.2-r1.ebuild",
+  "problem": "app-crypt/pinentry: depend on sec-policy/selinux-gpg w/ USE=selinux",
+  "bug": null
+ }
+}
