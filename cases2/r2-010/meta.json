@@ -1,0 +1,16 @@
+{
+ "id": "r2-010",
+ "sha": "ec0eddb84a8c13050b9816bb5e3cd1f0fe01f1e9",
+ "stratum": "edit-bump",
+ "pkg": "dev-haskell/unicode-transforms",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "dev-haskell/unicode-transforms",
+  "from_ver": "0.4.0.1",
+  "to_ver": "0.4.0.1-r1",
+  "old_file": "unicode-transforms-0.4.0.1.ebuild",
+  "new_file": "unicode-transforms-0.4.0.1-r1.ebuild"
+ },
+ "is_haskell": true
+}

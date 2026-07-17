@@ -1,0 +1,16 @@
+{
+ "id": "r2-011",
+ "sha": "b86e08ee7feb063da2bd736f031e483ceecdccb3",
+ "stratum": "edit-bump",
+ "pkg": "dev-haskell/tls-session-manager",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "dev-haskell/tls-session-manager",
+  "from_ver": "0.0.4",
+  "to_ver": "0.0.9",
+  "old_file": "tls-session-manager-0.0.4.ebuild",
+  "new_file": "tls-session-manager-0.0.9.ebuild"
+ },
+ "is_haskell": true
+}

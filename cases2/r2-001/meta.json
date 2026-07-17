@@ -1,0 +1,16 @@
+{
+ "id": "r2-001",
+ "sha": "390e47bf8ce3f3e37fa5978c6ac782d417800ec3",
+ "stratum": "edit-bump",
+ "pkg": "app-emacs/pkg-info",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "app-emacs/pkg-info",
+  "from_ver": "0.6",
+  "to_ver": "0.6-r1",
+  "old_file": "pkg-info-0.6.ebuild",
+  "new_file": "pkg-info-0.6-r1.ebuild"
+ },
+ "is_haskell": false
+}

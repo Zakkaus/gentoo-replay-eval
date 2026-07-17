@@ -1,0 +1,16 @@
+{
+ "id": "r2-007",
+ "sha": "ca97b3b7f587d6bee2760d7824f402a6ef558572",
+ "stratum": "edit-bump",
+ "pkg": "app-emacs/apache-mode",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "app-emacs/apache-mode",
+  "from_ver": "2.2.0",
+  "to_ver": "2.2.0-r1",
+  "old_file": "apache-mode-2.2.0.ebuild",
+  "new_file": "apache-mode-2.2.0-r1.ebuild"
+ },
+ "is_haskell": false
+}

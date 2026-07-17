@@ -1,0 +1,226 @@
+[
+ {
+  "id": "r2-000",
+  "sha": "6ac61fc00d5172db9d6844696f4f7f6591071cb7",
+  "stratum": "edit-bump",
+  "pkg": "app-emacs/magit-popup",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "app-emacs/magit-popup",
+   "from_ver": "2.13.3",
+   "to_ver": "2.13.3-r1",
+   "old_file": "magit-popup-2.13.3.ebuild",
+   "new_file": "magit-popup-2.13.3-r1.ebuild"
+  },
+  "is_haskell": false
+ },
+ {
+  "id": "r2-001",
+  "sha": "390e47bf8ce3f3e37fa5978c6ac782d417800ec3",
+  "stratum": "edit-bump",
+  "pkg": "app-emacs/pkg-info",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "app-emacs/pkg-info",
+   "from_ver": "0.6",
+   "to_ver": "0.6-r1",
+   "old_file": "pkg-info-0.6.ebuild",
+   "new_file": "pkg-info-0.6-r1.ebuild"
+  },
+  "is_haskell": false
+ },
+ {
+  "id": "r2-002",
+  "sha": "523f8731434493d397f61687656f7bdb855d6120",
+  "stratum": "edit-bump",
+  "pkg": "net-mail/stalwart-cli",
+  "ecosystem": "rust-go",
+  "task": {
+   "kind": "bump",
+   "pkg": "net-mail/stalwart-cli",
+   "from_ver": "0.15.1",
+   "to_ver": "0.15.4",
+   "old_file": "stalwart-cli-0.15.1.ebuild",
+   "new_file": "stalwart-cli-0.15.4.ebuild"
+  },
+  "is_haskell": false
+ },
+ {
+  "id": "r2-003",
+  "sha": "166efdff31ddf1c2ac2795e8c3de5bca9601eae9",
+  "stratum": "edit-bump",
+  "pkg": "app-emacs/treepy",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "app-emacs/treepy",
+   "from_ver": "0.1.2",
+   "to_ver": "0.1.2-r1",
+   "old_file": "treepy-0.1.2.ebuild",
+   "new_file": "treepy-0.1.2-r1.ebuild"
+  },
+  "is_haskell": false
+ },
+ {
+  "id": "r2-004",
+  "sha": "0f56eab628de3442e86587a588497e4f42958337",
+  "stratum": "edit-bump",
+  "pkg": "net-mail/stalwart-mail",
+  "ecosystem": "rust-go",
+  "task": {
+   "kind": "bump",
+   "pkg": "net-mail/stalwart-mail",
+   "from_ver": "0.15.1",
+   "to_ver": "0.15.4",
+   "old_file": "stalwart-mail-0.15.1.ebuild",
+   "new_file": "stalwart-mail-0.15.4.ebuild"
+  },
+  "is_haskell": false
+ },
+ {
+  "id": "r2-005",
+  "sha": "f3380cb9debd69ca2546d044e6d64d38052c8a6e",
+  "stratum": "edit-bump",
+  "pkg": "app-emacs/ocaml-mode",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "app-emacs/ocaml-mode",
+   "from_ver": "4.05.0",
+   "to_ver": "4.05.0-r1",
+   "old_file": "ocaml-mode-4.05.0.ebuild",
+   "new_file": "ocaml-mode-4.05.0-r1.ebuild"
+  },
+  "is_haskell": false
+ },
+ {
+  "id": "r2-006",
+  "sha": "d5abe69a191b3dcea7cbe993161b07b393a2042f",
+  "stratum": "edit-bump",
+  "pkg": "net-misc/asterisk-g729",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "net-misc/asterisk-g729",
+   "from_ver": "22.0.3.1.11",
+   "to_ver": "22.0.3.1.11-r1",
+   "old_file": "asterisk-g729-22.0.3.1.11.ebuild",
+   "new_file": "asterisk-g729-22.0.3.1.11-r1.ebuild"
+  },
+  "is_haskell": false
+ },
+ {
+  "id": "r2-007",
+  "sha": "ca97b3b7f587d6bee2760d7824f402a6ef558572",
+  "stratum": "edit-bump",
+  "pkg": "app-emacs/apache-mode",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "app-emacs/apache-mode",
+   "from_ver": "2.2.0",
+   "to_ver": "2.2.0-r1",
+   "old_file": "apache-mode-2.2.0.ebuild",
+   "new_file": "apache-mode-2.2.0-r1.ebuild"
+  },
+  "is_haskell": false
+ },
+ {
+  "id": "r2-008",
+  "sha": "8f586a93c0649401dd4f57d96e5befdb4997eed3",
+  "stratum": "edit-bump",
+  "pkg": "dev-util/shellcheck",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-util/shellcheck",
+   "from_ver": "0.9.0-r2",
+   "to_ver": "0.11.0",
+   "old_file": "shellcheck-0.9.0-r2.ebuild",
+   "new_file": "shellcheck-0.11.0.ebuild"
+  },
+  "is_haskell": true
+ },
+ {
+  "id": "r2-009",
+  "sha": "1aef57ffff805209920e4220fe3c1f5967ab7914",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/onetuple",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/onetuple",
+   "from_ver": "0.4.1.1",
+   "to_ver": "0.4.2.1",
+   "old_file": "onetuple-0.4.1.1.ebuild",
+   "new_file": "onetuple-0.4.2.1.ebuild"
+  },
+  "is_haskell": true
+ },
+ {
+  "id": "r2-010",
+  "sha": "ec0eddb84a8c13050b9816bb5e3cd1f0fe01f1e9",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/unicode-transforms",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/unicode-transforms",
+   "from_ver": "0.4.0.1",
+   "to_ver": "0.4.0.1-r1",
+   "old_file": "unicode-transforms-0.4.0.1.ebuild",
+   "new_file": "unicode-transforms-0.4.0.1-r1.ebuild"
+  },
+  "is_haskell": true
+ },
+ {
+  "id": "r2-011",
+  "sha": "b86e08ee7feb063da2bd736f031e483ceecdccb3",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/tls-session-manager",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/tls-session-manager",
+   "from_ver": "0.0.4",
+   "to_ver": "0.0.9",
+   "old_file": "tls-session-manager-0.0.4.ebuild",
+   "new_file": "tls-session-manager-0.0.9.ebuild"
+  },
+  "is_haskell": true
+ },
+ {
+  "id": "r2-012",
+  "sha": "d4efbddc4d8c03ea0efa528ec49c062325d3bcee",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/tasty-quickcheck",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/tasty-quickcheck",
+   "from_ver": "0.10.1.1",
+   "to_ver": "0.11.1",
+   "old_file": "tasty-quickcheck-0.10.1.1.ebuild",
+   "new_file": "tasty-quickcheck-0.11.1.ebuild"
+  },
+  "is_haskell": true
+ },
+ {
+  "id": "r2-013",
+  "sha": "62f924522d5cc6acbfebf5b132fd1721b7db3958",
+  "stratum": "edit-bump",
+  "pkg": "dev-haskell/lukko",
+  "ecosystem": "other",
+  "task": {
+   "kind": "bump",
+   "pkg": "dev-haskell/lukko",
+   "from_ver": "0.1.1.3-r1",
+   "to_ver": "0.1.2",
+   "old_file": "lukko-0.1.1.3-r1.ebuild",
+   "new_file": "lukko-0.1.2.ebuild"
+  },
+  "is_haskell": true
+ }
+]

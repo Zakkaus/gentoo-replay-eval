@@ -1,0 +1,16 @@
+{
+ "id": "r2-000",
+ "sha": "6ac61fc00d5172db9d6844696f4f7f6591071cb7",
+ "stratum": "edit-bump",
+ "pkg": "app-emacs/magit-popup",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "app-emacs/magit-popup",
+  "from_ver": "2.13.3",
+  "to_ver": "2.13.3-r1",
+  "old_file": "magit-popup-2.13.3.ebuild",
+  "new_file": "magit-popup-2.13.3-r1.ebuild"
+ },
+ "is_haskell": false
+}

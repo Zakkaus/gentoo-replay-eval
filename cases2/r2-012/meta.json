@@ -1,0 +1,16 @@
+{
+ "id": "r2-012",
+ "sha": "d4efbddc4d8c03ea0efa528ec49c062325d3bcee",
+ "stratum": "edit-bump",
+ "pkg": "dev-haskell/tasty-quickcheck",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "dev-haskell/tasty-quickcheck",
+  "from_ver": "0.10.1.1",
+  "to_ver": "0.11.1",
+  "old_file": "tasty-quickcheck-0.10.1.1.ebuild",
+  "new_file": "tasty-quickcheck-0.11.1.ebuild"
+ },
+ "is_haskell": true
+}

@@ -1,0 +1,16 @@
+{
+ "id": "r2-005",
+ "sha": "f3380cb9debd69ca2546d044e6d64d38052c8a6e",
+ "stratum": "edit-bump",
+ "pkg": "app-emacs/ocaml-mode",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "app-emacs/ocaml-mode",
+  "from_ver": "4.05.0",
+  "to_ver": "4.05.0-r1",
+  "old_file": "ocaml-mode-4.05.0.ebuild",
+  "new_file": "ocaml-mode-4.05.0-r1.ebuild"
+ },
+ "is_haskell": false
+}

@@ -24,8 +24,21 @@ AB = os.environ.get('AUTOBUMP_BIN',
                     os.path.join(os.path.dirname(ROOT), 'autobump-rb', 'bin', 'autobump'))
 
 idx = json.load(open(os.path.join(CASES, 'index.json')))
-verds = {(v['id'], v['arm']): v for v in json.load(open(os.path.join(RESULTS, 'verdicts.json')))}
-scores = {(s['id'], s['arm']): s for s in json.load(open(os.path.join(RESULTS, 'scores.json')))}
+
+# Ground truth comes in two shapes: round-1 uses results/verdicts.json
+# ({id, arm, verdict:correct/partial/wrong}); a re-sampled set (e.g. cases2) drops a
+# CASES/verdicts.json ({id, reproducible: bool}) from a judge pass. Support both.
+_cv = os.path.join(CASES, 'verdicts.json')
+if os.path.exists(_cv):
+    _v = json.load(open(_cv))
+    GT = {x['id']: (x['reproducible'] is False) for x in _v}   # not reproducible -> should escalate
+    LABEL = {x['id']: ('metadata' if x['reproducible'] is False else 'reproducible') for x in _v}
+    JAC = {}
+else:
+    _v = [x for x in json.load(open(os.path.join(RESULTS, 'verdicts.json'))) if x['arm'] == 'without']
+    GT = {x['id']: (x['verdict'] == 'wrong') for x in _v}
+    LABEL = {x['id']: x['verdict'] for x in _v}
+    JAC = {s['id']: s['jaccard'] for s in json.load(open(os.path.join(RESULTS, 'scores.json'))) if s['arm'] == 'without'}
 
 
 def run_check(pkg, to, before):
@@ -54,11 +67,9 @@ def main():
             continue
         ec, esc = run_check(t['pkg'], t['to_ver'], before)
         decision = {0: 'mechanical', 3: 'escalate', 2: 'abort'}.get(ec, f'exit{ec}')
-        v = verds.get((c['id'], 'without'), {}).get('verdict', '?')
-        jac = scores.get((c['id'], 'without'), {}).get('jaccard', 0.0)
         rows.append(dict(id=c['id'], pkg=t['pkg'], ver=f'{t["from_ver"]}->{t["to_ver"]}',
-                         decision=decision, verdict=v, jac=jac,
-                         should_escalate=(v == 'wrong'), esc='; '.join(esc)[:50]))
+                         decision=decision, verdict=LABEL.get(c['id'], '?'), jac=JAC.get(c['id'], 0.0),
+                         should_escalate=GT.get(c['id'], False), esc='; '.join(esc)[:50]))
 
     print(f'{"case":16} {"pkg":34} {"bump":22} {"autobump":11} {"verdict":8} {"jac":5}')
     for r in rows:

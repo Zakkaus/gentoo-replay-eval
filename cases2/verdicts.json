@@ -1,0 +1,205 @@
+[
+ {
+  "id": "r2-000",
+  "is_haskell": false,
+  "reproducible": false,
+  "changed": [
+   "EAPI bump (7->8)",
+   "SRC_URI restructured to conditional live-ebuild (git-r3/EGIT_REPO_URI) pattern",
+   "dependency version bound removed (>=app-emacs/dash-2.13.0 -> app-emacs/dash)",
+   "blocker dependency removed (!!<app-emacs/magit-2.12.1)",
+   "DEPEND/RDEPEND/CDEPEND restructured into RDEPEND+BDEPEND",
+   "DOCS syntax changed from string to array",
+   "HOMEPAGE trailing slash added",
+   "copyright year bump"
+  ],
+  "reason": "The before\u2192truth diff is far more than a mechanical version-string/keyword/copyright touch-up. Deciding lines:\n\n- EAPI bumped 7\u21928 (before L4 `EAPI=7` vs truth L4 `EAPI=8`) \u2014 this alone triggers changes elsewhere (BDEPEND becomes valid), which is a deliberate rewrite, not a copy.\n- SRC_URI restructured into a conditional live-ebuild pattern (truth L11-20: `if [[ \"${PV}\" == *9999* ]]; then inherit git-r3; EGIT_REPO_URI=...; else SRC_URI=...; KEYWORDS=...; fi`) vs before's flat unconditional `SRC_URI`/`KEYWORDS` (before L10,14). A clean-room agent given only \"bump to r1\" has no reason to invent 9"
+ },
+ {
+  "id": "r2-001",
+  "is_haskell": false,
+  "reproducible": false,
+  "changed": [
+   "EAPI:7->8",
+   "added 9999 live-ebuild conditional block (inherit git-r3; EGIT_REPO_URI)",
+   "HOMEPAGE trailing slash added",
+   "copyright year 2023->2025 (mechanical)",
+   "RDEPEND/DOCS/SITEFILE reformatted (cosmetic)"
+  ],
+  "reason": "Before->truth diff is more than a mechanical version copy. Deciding lines: EAPI=7 -> EAPI=8 (line 4), and the new `if [[ \"${PV}\" == *9999* ]]; then inherit git-r3; EGIT_REPO_URI=...; else SRC_URI=...; KEYWORDS=...; fi` restructuring wrapped around the previously unconditional SRC_URI/KEYWORDS block, plus HOMEPAGE gaining a trailing slash. None of these are derivable from the before-ebuild + 'bump to 0.6-r1' intent alone: the EAPI jump is a real behavioral choice, and the live-ebuild (9999) scaffolding requires knowledge of a template/sibling ebuild pattern not present anywhere in the before fi"
+ },
+ {
+  "id": "r2-002",
+  "is_haskell": false,
+  "reproducible": false,
+  "changed": [
+   "copyright-year (mechanical)",
+   "version-string substitution (mechanical)",
+   "CRATES list regenerated from upstream Cargo.lock (metadata-driven)",
+   "RUST_MIN_VER bumped from upstream MSRV (metadata-driven)",
+   "new SRC_URI conditional block for maintainer-hosted crates tarball, version-specific URL (metadata-driven/new scaffolding)"
+  ],
+  "reason": "The before->truth diff is dominated by three non-mechanical changes: (1) the entire CRATES=\\\"...\\\" block (867 lines, every pinned crate@version pair) is replaced/emptied \u2014 this is derived from the upstream Cargo.lock at the v0.15.4 tag, which a clean-room agent has no access to; (2) RUST_MIN_VER=\\\"1.85.0\\\" -> \\\"1.88.0\\\", taken from upstream's rust-version/MSRV declaration, not inferable from the 0.15.1 ebuild; (3) a brand-new SRC_URI scaffolding block is introduced: `if [[ ${PKGBUMPING} != ${PVR} ]]; then SRC_URI+=\\\"\\\\n\\\\thttps://dev.gentoo.org/~lordvan/stalwart-0.15.4-crates.tar.xz\\\\n\\\\t\\\"; f"
+ },
+ {
+  "id": "r2-003",
+  "is_haskell": false,
+  "reproducible": false,
+  "changed": [
+   "EAPI bump (7->8) - mechanical",
+   "copyright year bump - mechanical",
+   "HOMEPAGE trailing-slash normalization - mechanical",
+   "new git-r3/EGIT_REPO_URI live-ebuild conditional block - requires external packaging-template knowledge",
+   "SRC_URI/S/KEYWORDS moved inside PV==*9999* branch - requires external packaging-template knowledge",
+   "DOCS string->array syntax change - eclass-convention knowledge not evidenced in before file"
+  ],
+  "reason": "This is not a mechanical PV-copy + keyword-reset bump. Besides the trivial mechanical edits (copyright 1999-2023 -> 1999-2025; EAPI=7 -> EAPI=8; HOMEPAGE gains a trailing slash), the truth ebuild restructures the whole body around a live-ebuild capability that has no trace in the before file:\n\n  +if [[ \"${PV}\" == *9999* ]] ; then\n  +\tinherit git-r3\n  +\tEGIT_REPO_URI=\"https://github.com/volrath/${PN}.el\"\n  +else\n  +\tSRC_URI=\"https://github.com/volrath/${PN}.el/archive/${PV}.tar.gz\\n\\t\\t-> ${P}.tar.gz\"\n  +\tS=\"${WORKDIR}/${PN}.el-${PV}\"\n  +\tKEYWORDS=\"amd64 x86\"\n  +fi\n\nand\n\n  -DOCS=\"README.md\"\n  +"
+ },
+ {
+  "id": "r2-004",
+  "is_haskell": false,
+  "reproducible": false,
+  "changed": [
+   "version string (PV bump, mechanical)",
+   "copyright year bump (mechanical)",
+   "CRATES block fully regenerated from new upstream Cargo.lock (metadata-driven, ~860 crate@version entries removed/would need full replacement)",
+   "SRC_URI structurally changed: new conditional fetch of a maintainer-hosted pre-vendored crates tarball keyed to 0.15.4 (metadata/upstream-data-driven, not derivable offline)",
+   "RUST_MIN_VER bumped 1.85.0 -> 1.88.0, tracking upstream rust-version in Cargo.toml (metadata-driven)"
+  ],
+  "reason": "The before-ebuild contains an 860-line CRATES=\\\"...\\\" block (pycargoebuild-generated exact name@version pins mirroring the upstream Cargo.lock for 0.15.1); the truth ebuild for 0.15.4 replaces it with an empty CRATES=\\\"\\\" and instead adds `if [[ ${PKGBUMPING} != ${PVR} ]]; then SRC_URI+=\\\"https://dev.gentoo.org/~lordvan/stalwart-0.15.4-crates.tar.xz\\\"; fi` \u2014 a brand-new, maintainer-hosted pre-vendored crates tarball specific to 0.15.4 that no mechanical version-string edit could produce. Additionally RUST_MIN_VER changes from \\\"1.85.0\\\" to \\\"1.88.0\\\", tracking upstream's rust-version bump in C"
+ },
+ {
+  "id": "r2-005",
+  "is_haskell": false,
+  "reproducible": false,
+  "changed": [
+   "EAPI bump (7->8)",
+   "new conditional 9999/git-r3 live-ebuild scaffolding copied from a sibling ebuild not present in before-state",
+   "SRC_URI/S/KEYWORDS relocated into else-branch of new conditional",
+   "DOCS string-to-array syntax conversion (EAPI-8/eclass convention)"
+  ],
+  "reason": "The before ebuild (EAPI=7, flat SRC_URI/S/KEYWORDS/DOCS string) does not mechanically produce the truth ebuild via a version-string bump. The real -r1 change bumps EAPI=7\u2192EAPI=8, and \u2014 more importantly \u2014 wraps SRC_URI/S/KEYWORDS in a new `if [[ \"${PV}\" == *9999* ]]; then inherit git-r3; EGIT_REPO_URI=...; else ... fi` block that mirrors a sibling ocaml-mode-9999.ebuild's structure (a file not present in the before-state and not derivable from general Gentoo knowledge or the before ebuild alone). It also converts `DOCS=\"README README.itz\"` to the EAPI-8 array form `DOCS=( README README.itz )`. "
+ },
+ {
+  "id": "r2-006",
+  "is_haskell": false,
+  "reproducible": false,
+  "changed": [
+   "build-tool-version-bump (MY_TOOLS_VERSION date, affects SRC_URI rename targets)",
+   "RESTRICT flag addition (bindist)",
+   "new QA suppression variable (QA_TEXTRELS)"
+  ],
+  "reason": "The bump keeps PV literally identical (22.0.3.1.11, just +r1), so a mechanical version-copy already fails to match truth; the actual diff is substantive: (1) `MY_TOOLS_VERSION=20260301` -> `20260331` changes the SRC_URI rename targets for Digium's register/asthostid binaries -- only knowable from upstream, not derivable from the bump intent; (2) `RESTRICT=\"mirror strip\"` -> `RESTRICT=\"bindist mirror strip\"` is a licensing/redistribution judgment call; (3) a new `QA_TEXTRELS=\"/usr/$(get_libdir)/asterisk/modules/codec_g729a.so\"` line in pkg_setup() was added, which only follows from observing a "
+ },
+ {
+  "id": "r2-007",
+  "is_haskell": false,
+  "reproducible": false,
+  "changed": [
+   "EAPI major version bump (7->8)",
+   "new git-r3 live-ebuild conditional block added (not present before)",
+   "SRC_URI moved/reformatted inside conditional",
+   "KEYWORDS relocated inside conditional (values unchanged)",
+   "HOMEPAGE trailing slash normalization",
+   "DOCS syntax changed from string to bash array",
+   "copyright year bump"
+  ],
+  "reason": "The before->truth diff is a full ebuild-skeleton rewrite, not a mechanical version bump. Key non-derivable changes: EAPI=7->8; introduction of a brand-new `if [[ \\\"${PV}\\\" == *9999* ]]; then inherit git-r3; EGIT_REPO_URI=...; else SRC_URI=...; KEYWORDS=...; fi` conditional that has no counterpart in the before ebuild (adds live-ebuild support and relocates SRC_URI/KEYWORDS inside it); HOMEPAGE gains a trailing slash; DOCS changes from a bare string `DOCS=\\\"README.org\\\"` to a bash array `DOCS=( README.org )`; SITEFILE/DOCS lines reordered. None of these follow mechanically from 'bump PV and res"
+ },
+ {
+  "id": "r2-008",
+  "is_haskell": true,
+  "reproducible": false,
+  "changed": [
+   "copyright-year",
+   "hackage-revision-drop (CABAL_HACKAGE_REVISION removed)",
+   "dependency-upper-bound changes (aeson, diff, quickcheck)",
+   "dependency-lower-bound change (ghc, cabal)",
+   "fgl constraint restructuring (CABAL_CHDEPS patch removed, replaced with simple range)",
+   "RESTRICT=test removal (upstream test-fix knowledge)",
+   "hackport tool-version comment change"
+  ],
+  "reason": "The before/truth diff is dominated by Cabal dependency-bound rewrites that only hackport reading the new release's upstream .cabal file (or Hackage revision metadata) could produce: `CABAL_HACKAGE_REVISION=1` is dropped entirely; per-dep upper bounds shift with no arithmetic tie to the version bump (`<dev-haskell/aeson-2.2` -> `<dev-haskell/aeson-2.3`, `<dev-haskell/diff-0.5` -> `<dev-haskell/diff-1.1`, `<dev-haskell/quickcheck-2.15` -> `<dev-haskell/quickcheck-2.17`, `>=dev-lang/ghc-8.10.6` -> `>=dev-lang/ghc-9.0.2`, `>=dev-haskell/cabal-3.2.1.0` -> `>=dev-haskell/cabal-3.4.1.0`); the entire "
+ },
+ {
+  "id": "r2-009",
+  "is_haskell": true,
+  "reproducible": false,
+  "changed": [
+   "version-string (mechanical)",
+   "copyright-year (mechanical)",
+   "hackport-tool-version comment (cosmetic, non-derivable but non-functional)",
+   "dependency bounds changed (ghc, cabal)",
+   "dependency set restructured (deps moved from unconditional RDEPEND to test?-conditional DEPEND)",
+   "cabal USE-flag suffixes/version-bounds dropped on moved deps"
+  ],
+  "reason": "Version string, copyright year (1999-2023 -> 1999-2026), and hackport-tool comment (0.8.2.0.9999 -> 0.9.1.0) are mechanical/cosmetic. But the dependency block is substantively rewritten from upstream .cabal data unavailable offline: RDEPEND drops '>=dev-haskell/foldable1-classes-compat-0.1:=[profile?] <dev-haskell/foldable1-classes-compat-0.2:=[profile?]' and '>=dev-haskell/hashable-1.3.5.0:=[profile?] <dev-haskell/hashable-1.5:=[profile?]' entirely, moving both into a brand-new 'test? ( >=dev-haskell/foldable1-classes-compat-0.1 <dev-haskell/foldable1-classes-compat-0.2  dev-haskell/hashable "
+ },
+ {
+  "id": "r2-010",
+  "is_haskell": true,
+  "reproducible": false,
+  "changed": [
+   "hackage-revision-number",
+   "new-dependency-added (dev-haskell/text)",
+   "dependency-version-bounds-changed (unicode-data, ghc, cabal, quickcheck)",
+   "new-CABAL_CHDEPS-block-from-upstream-cabal",
+   "flag-rename (-gauge -> -use-gauge)",
+   "hackport-tool-version-comment",
+   "IUSE-scaffolding-removed",
+   "copyright-year"
+  ],
+  "reason": "The before->truth diff is a full hackport-regenerated ebuild driven by a new Hackage cabal-metadata revision, not a mechanical bump. Deciding lines: (1) `CABAL_HACKAGE_REVISION=\"3\"` -> `CABAL_HACKAGE_REVISION=9` \u2014 the revision number only exists in Hackage's revised .cabal file, unknowable offline. (2) new `CABAL_CHDEPS=( 'bytestring >= 0.9 && < 0.13' ... 'text >=1.1.1 && <=1.2.5.0 || >=2.0 && <2.2' ... )` block \u2014 verbatim upstream .cabal dependency-range text, absent from the before ebuild. (3) `RDEPEND` gains a brand-new dep `>=dev-haskell/text-1.1.1:=[profile?]` and the `unicode-data` upper"
+ },
+ {
+  "id": "r2-011",
+  "is_haskell": true,
+  "reproducible": false,
+  "changed": [
+   "copyright-year",
+   "description-text-from-upstream",
+   "src_uri-removed",
+   "dependency-bounds-tightened-multiple",
+   "dependency-added-crypto-token",
+   "dependency-added-serialise",
+   "dependency-removed-basement",
+   "min-ghc-version-bump",
+   "min-cabal-version-bump",
+   "hackport-tool-version-comment",
+   "iuse-blank-removed"
+  ],
+  "reason": "The diff is dominated by data only present in upstream tls-session-manager-0.0.9's .cabal file, which hackport re-reads to regenerate the ebuild. DESCRIPTION text changed (\"In-memory TLS session manager\" -> \"In-memory TLS session DB and session ticket\"). RDEPEND was fully rewritten: every dep gained new lower+upper version bounds (auto-update >=0.2.2:<0.3, clock >=0.8:<0.9, memory >=0.18.0:<0.19, psqueues >=0.2:<0.3, tls >=2.0:<2.3), dev-haskell/basement was dropped, and two brand-new deps appeared (dev-haskell/crypto-token, dev-haskell/serialise) that don't exist anywhere in the before-ebuild"
+ },
+ {
+  "id": "r2-012",
+  "is_haskell": true,
+  "reproducible": false,
+  "changed": [
+   "hackage-revision-number",
+   "dependency-bounds-changed",
+   "dependency-bounds-added",
+   "test-dependency-set-replaced",
+   "cabal-version-floor-bumped",
+   "src-uri-removed",
+   "restrict-test-added",
+   "cabal-features-changed",
+   "hackport-tool-version-bump",
+   "copyright-year"
+  ],
+  "reason": "A mechanical version-copy (bump P/PV, reset copyright year to 2026) does NOT match truth. The real bump adds CABAL_HACKAGE_REVISION=1 (Hackage revision, upstream-only data); tightens/changes every RDEPEND bound from upstream's new .cabal file \u2014 `dev-haskell/optparse-applicative:=` -> `<dev-haskell/optparse-applicative-0.19:=`, quickcheck gains `<dev-haskell/quickcheck-2.16`, `random:=` -> `<dev-haskell/random-1.4:=`, `tagged:=` -> `<dev-haskell/tagged-0.9:=`, `>=dev-haskell/tasty-1.0.1` -> `>=dev-haskell/tasty-1.5.1 <dev-haskell/tasty-1.6`, `>=dev-lang/ghc-7.4.1` -> `>=dev-lang/ghc-9.0.2`; bum"
+ },
+ {
+  "id": "r2-013",
+  "is_haskell": true,
+  "reproducible": false,
+  "changed": [
+   "copyright-year (mechanical)",
+   "hackport-tool-version-comment (metadata, non-derivable)",
+   "CABAL_HACKAGE_REVISION (hackage revision metadata)",
+   "dependency-lower-bound-change: dev-lang/ghc",
+   "dependency-lower-bound-change: dev-haskell/cabal",
+   "dependency-bound-changes: test-suite deps (singleton-bool, tasty, tasty-expected-failure, tasty-hunit/temporary reorder)"
+  ],
+  "reason": "Version-string and copyright-year edits are trivial, but the real diff is dominated by data only present in the new upstream .cabal file. Line 9: CABAL_HACKAGE_REVISION=4 -> 1 (Hackage revision counter for the new version, unguessable). Line 21: RDEPEND >=dev-lang/ghc-8.8.1 -> >=dev-lang/ghc-9.0.2 (new base-library lower bound implies new GHC bound). Line 24: DEPEND >=dev-haskell/cabal-3.0.0.0 -> >=dev-haskell/cabal-3.4.1.0. Lines 26-29: test-suite dep bounds rewritten (singleton-bool 0.1.5->0.1.8, tasty 1.4.0.1<1.5 -> 1.5<1.6, tasty-expected-failure collapsed from an || of two ranges to a sin"
+ }
+]

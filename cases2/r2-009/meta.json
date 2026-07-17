@@ -1,0 +1,16 @@
+{
+ "id": "r2-009",
+ "sha": "1aef57ffff805209920e4220fe3c1f5967ab7914",
+ "stratum": "edit-bump",
+ "pkg": "dev-haskell/onetuple",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "dev-haskell/onetuple",
+  "from_ver": "0.4.1.1",
+  "to_ver": "0.4.2.1",
+  "old_file": "onetuple-0.4.1.1.ebuild",
+  "new_file": "onetuple-0.4.2.1.ebuild"
+ },
+ "is_haskell": true
+}

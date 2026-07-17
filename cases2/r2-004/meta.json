@@ -1,0 +1,16 @@
+{
+ "id": "r2-004",
+ "sha": "0f56eab628de3442e86587a588497e4f42958337",
+ "stratum": "edit-bump",
+ "pkg": "net-mail/stalwart-mail",
+ "ecosystem": "rust-go",
+ "task": {
+  "kind": "bump",
+  "pkg": "net-mail/stalwart-mail",
+  "from_ver": "0.15.1",
+  "to_ver": "0.15.4",
+  "old_file": "stalwart-mail-0.15.1.ebuild",
+  "new_file": "stalwart-mail-0.15.4.ebuild"
+ },
+ "is_haskell": false
+}

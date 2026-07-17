@@ -1,0 +1,16 @@
+{
+ "id": "r2-006",
+ "sha": "d5abe69a191b3dcea7cbe993161b07b393a2042f",
+ "stratum": "edit-bump",
+ "pkg": "net-misc/asterisk-g729",
+ "ecosystem": "other",
+ "task": {
+  "kind": "bump",
+  "pkg": "net-misc/asterisk-g729",
+  "from_ver": "22.0.3.1.11",
+  "to_ver": "22.0.3.1.11-r1",
+  "old_file": "asterisk-g729-22.0.3.1.11.ebuild",
+  "new_file": "asterisk-g729-22.0.3.1.11-r1.ebuild"
+ },
+ "is_haskell": false
+}
