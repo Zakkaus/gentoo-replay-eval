@@ -1,6 +1,6 @@
 CORPUS  ?= .corpus
 COMMITS ?= ../gentoo-tree-lessons/data/commits.jsonl
-.PHONY: cases score eval manifest check help
+.PHONY: cases score eval manifest check xcheck help
 help: ## show targets
 	@grep -E '^[a-z]+:.*##' Makefile | sed -E 's/:.*## / -- /'
 cases: ## rebuild the eval set from the corpus + classified commits
@@ -11,5 +11,7 @@ manifest: ## record the eval-set provenance (source, seed, strata)
 	python3 provenance.py
 check: ## validate cases + scripts (what CI runs; no corpus needed)
 	python3 check.py
+xcheck: ## cross-check autobump-rb --check decisions vs held-out ground truth (AUTOBUMP_BIN=...)
+	python3 autobump_xcheck.py
 eval: ## (re)run the clean-room solve+judge agents -- needs the Claude Code harness
 	@echo "Run: Workflow({scriptPath: workflows/replay-eval.js, args: <case ids from cases/index.json>})"

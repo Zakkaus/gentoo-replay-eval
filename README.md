@@ -117,6 +117,7 @@ absolute paths and are env-driven — point them at any ebuild repo, **not limit
 ## 脚本与数据 / Scripts & data
 
 - `select_cases.py` / `score.py` / `lesson_map.py` — 确定性,可独立运行 / deterministic, standalone.
+- `autobump_xcheck.py` (`make xcheck`) — 第二条轴:拿本仓库的真值交叉验证 **autobump-rb 决策核心**——对每个 edit-bump 跑 `autobump-rb --check`,看它 mechanical/escalate 的判断是否对得上「该 bump 能否离线复现」(verdict wrong = metadata-driven = 该 escalate)。首轮发现静态 classify 对 metadata-driven bump 的 escalation recall = 0%(11/12 是 hackport/haskell-cabal,deps 从上游 .cabal 生成);autobump-rb 补了 `inherit haskell-cabal → escalate` 后 recall 0%→92%。/ A second axis: cross-check the deterministic engine's decision against ground truth — does it escalate exactly the bumps that are not offline-reproducible? Surfaced a 0% recall blind spot on metadata-driven (haskell-cabal) bumps; fixed to 92%.
 - `workflows/replay-eval.js` — 跑 round-1 的 Claude Code 工作流脚本(clean-room solve + judge,含原始提示词)/
   the Claude Code workflow that ran round-1 (clean-room solve + judge, exact prompts).
 - `cases/` — gentoo/gentoo 真实快照做的 fixture / real gentoo/gentoo snapshots as fixtures.
